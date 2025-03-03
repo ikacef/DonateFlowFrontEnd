@@ -4,7 +4,6 @@ import {useNavigate} from "react-router-dom";
 
 function TestCreateUser(){
 
-    const navigate = useNavigate();
     const  [user, setUser] = useState({
         fname: "",
         lname: "",
@@ -16,6 +15,7 @@ function TestCreateUser(){
         setUser({...user, [e.target.name]: value})
     }
 
+    const navigate = useNavigate();
     const createUser = (e) => {
 
         e.preventDefault();

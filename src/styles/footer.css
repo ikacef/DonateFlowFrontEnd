@@ -1,0 +1,28 @@
+*{
+    height: auto;
+    width: auto;
+}
+.footer-main{
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #003f67;
+    font-family: "Times New Roman";
+    width: 100%;
+}
+.foot1{
+    text-align: justify-all;
+}
+.footer-title{
+    font-family: "Courier New";
+}
+.footer-bottom{
+    text-decoration: underline;
+    text-align: center;
+
+}
+.link-list{
+    list-style: none;
+    text-decoration: none;
+}

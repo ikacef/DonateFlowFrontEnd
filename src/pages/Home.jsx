@@ -12,6 +12,12 @@ function Home(){
             <Button onClick={navigate("/")}>NotFound</Button>
 
 
+
+
+
+
+
+
         </div>
 
     )
