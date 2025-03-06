@@ -4,12 +4,20 @@ import Home from "./pages/Home.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import testCreateUser from "./testFolder/testCreateUser.jsx";
 import Footer from "./pages/Footer.jsx";
+import Navbar from "./pages/Navbar.jsx";
 
 
 function App() {
 
 
   return (
+
+      <>
+        <Navbar/>
+
+        <Footer/>
+      </>
+
   /*  <Router>
       <Routes>
 
@@ -22,7 +30,7 @@ function App() {
       </Routes>
     </Router>
     */
-    <Footer/>
+
   )
 }
 

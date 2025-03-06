@@ -10,6 +10,10 @@
     background-color: #003f67;
     font-family: "Times New Roman";
     width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 25%;
+
 }
 .foot1{
     text-align: justify-all;
@@ -19,10 +23,14 @@
 }
 .footer-bottom{
     text-decoration: underline;
-    text-align: center;
-
+    position: fixed;
+    bottom: 0;
 }
-.link-list{
+.link-list, .source-list{
     list-style: none;
     text-decoration: none;
+    text-align: left;
+}
+.foot-source, .foot-links, .foot1{
+    margin-left: 100px;
 }
