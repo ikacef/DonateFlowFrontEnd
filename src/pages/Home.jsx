@@ -7,18 +7,7 @@ function Home(){
 
     return(
 
-        <div>
-
-            <Button onClick={navigate("/")}>NotFound</Button>
-
-
-
-
-
-
-
-
-        </div>
+        <div>Home</div>
 
     )
 

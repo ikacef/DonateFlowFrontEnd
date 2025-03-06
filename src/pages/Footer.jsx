@@ -1,8 +1,5 @@
 import React from "react";
 import '../styles/footer.css';
-import '../img/logo1.jpg';
-import '../img/logo2.jpg';
-import '../img/logo3.jpg' ;
 
 
 
@@ -19,13 +16,21 @@ function Footer(){
                     <li><a href="../pages/Service.jsx">About us</a></li>
                     <li><a href="../pages/Service.jsx">How it works</a></li>
                     <li><a href="../pages/Service.jsx">FAQs</a></li>
+                </ul>
+            </div>
+
+            <div className="foot-source">
+                <h4 className="links-title">Ressources</h4>
+                <ul className="source-list">
+                    <li><a href="../pages/Service.jsx">Documentaion</a></li>
+                    <li><a href="../pages/Service.jsx">Support</a></li>
                     <li><a href="../pages/Service.jsx">Contact</a></li>
                 </ul>
             </div>
 
 
             <div className="foot1">
-                <h3 className="footer-title">DonateFlow</h3>
+            <h3 className="footer-title">DonateFlow</h3>
                 <p className="footer-paragraph">Supporting causes that matter.<br/>
                     Making giving simple and secure.<br/>
                     Every donation drives change.<br/>
@@ -33,18 +38,9 @@ function Footer(){
             </div>
 
 
-            <div className="foot-source">
-
-
-
-            </div>
-
-
             <div className="footer-bottom">Projet de développement d'une application Web <>&copy;</> 2025 Copyright
                 DonateFlow. All rights reserved
-                <a href="http://www.linkedin.com"><img src="../img/logo1.jpg"/></a>
-                <a href="http://www.github.com"><img src="../img/"/></a>
-                <a href="http://www.discord.com"><img src="../img/"/></a>
+                TODO
             </div>
 
         </footer>
