@@ -1,5 +1,8 @@
-import React from "react";
+import "react";
 import '../styles/footer.css';
+import logo1 from "../img/logo1.png";
+import logo2 from "../img/logo2.png";
+import logo3 from "../img/logo3.png";
 
 
 
@@ -40,7 +43,11 @@ function Footer(){
 
             <div className="footer-bottom">Projet de développement d'une application Web <>&copy;</> 2025 Copyright
                 DonateFlow. All rights reserved
-                TODO
+            </div>
+            <div className="images">
+                <a href="http://www.linkedin.com"><img src={logo1} className="logo1"/></a>
+                <a href="http://www.github.com"><img src={logo2} className="logo2"/></a>
+                <a href="http://www.discord.com"><img src={logo3} className="logo3"/></a>
             </div>
 
         </footer>
