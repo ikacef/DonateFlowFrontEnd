@@ -42,3 +42,39 @@
     height: 50px;
     margin-left: 5px;
 }
+
+
+
+
+.front{
+    font-size: 100px;
+    font-family: Bahnschrift;
+    margin-bottom: 50px;
+
+}
+
+
+
+
+.navbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #003f67;
+    width: 100%;
+}.logoFLow{margin-right: 500px; width: 10%}
+
+.navTitle{
+    color: #c8c8ff;
+    font-size: 30px;
+}.navTitle:hover{color: mediumpurple;}
+
+.navElement{
+    margin-left: 50px;
+    color: white;
+}.navElement:hover{color: lightgreen; text-decoration: underline;}
+
+.searchButton{
+    color: white;
+    background-color: #003f67;
+}.searchBar{width:280px}
