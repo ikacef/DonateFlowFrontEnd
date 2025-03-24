@@ -1,45 +1,95 @@
 import "react";
+import "../styles/store.css";
+
+import visa from "../img/visa.jpg";
+import wallet from "../img/wallet.jpg";
+import bottle from "../img/bottle.jpg";
+import soccerball from "../img/soccerball.jpg";
+import monitor from "../img/monitor.jpg";
+import backpack from "../img/backpack.jpg";
 
 function Store(){
 
     return (
 
-        <div className="card-group">
-            <div className="card">
-                <img src="..." className="card-img-top" alt="..."/>
-                <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
+
+            <div className="card-group">
+
+                <div className="card" id="card1">
+                    <div className="card-body">
+                        <h5 className="card-title">Visa gift card</h5>
+                        <p className="card-text">Prepaid visa card with unlimited benefits and a value of a hundred
+                            dollars.</p>
+                    </div>
+                    <img src={visa} className="card-img-top" id="img1"/>
+                    <div className="card-footer">
+                        <small className="text-body-secondary">In stock - Price : 100.00$</small>
+                    </div>
                 </div>
-                <div className="card-footer">
-                    <small className="text-body-secondary">Last updated 3 mins ago</small>
+
+
+                <div className="card" id="card2">
+                    <div className="card-body">
+                        <h5 className="card-title">Card wallet</h5>
+                        <p className="card-text">An aestethically pleasing wallet with futuristic features containing ample card space while maintaining a low transport volume</p>
+                    </div>
+                    <img src={wallet} className="card-img-top" alt="..."/>
+                    <div className="card-footer">
+                        <small className="text-body-secondary">In stock - Price : 15.00$</small>
+                    </div>
                 </div>
+
+
+                <div className="card" id="card3">
+                    <div className="card-body">
+                        <h5 className="card-title">Flow water 50 pack</h5>
+                        <p className="card-text">Exclusive pack format in sponsorship with the Flow water beverage company and a limited edition flavor. Get it while you can !!!</p>
+                    </div>
+                    <img src={bottle} className="card-img-top" alt="..."/>
+                    <div className="card-footer">
+                        <small className="text-body-secondary">In stock - Price : 45.00$</small>
+                    </div>
+                </div>
+
+
+                <div className="card" id="card4">
+                    <div className="card-body">
+                        <h5 className="card-title">Card title</h5>
+                        <p className="card-text">Famous soccer player and all-time great Pele signed soccer ball from his infamous 8 goal game.</p>
+                    </div>
+                    <img src={soccerball} className="card-img-top" alt="..."/>
+                    <div className="card-footer">
+                        <small className="text-body-secondary">In stock - Price : 200.00$</small>
+                    </div>
+                </div>
+
+
+                <div className="card" id="card5">
+                    <div className="card-body">
+                        <h5 className="card-title">Card title</h5>
+                        <p className="card-text">This card has supporting text below as a natural lead-in to additional
+                            content.</p>
+                    </div>
+                    <img src={monitor} className="card-img-top" alt="..."/>
+                    <div className="card-footer">
+                        <small className="text-body-secondary">In stock - Price : 500.00$</small>
+                    </div>
+                </div>
+
+
+                <div className="card" id="card6">
+                    <div className="card-body">
+                        <h5 className="card-title">Card title</h5>
+                        <p className="card-text">This card has supporting text below as a natural lead-in to additional
+                            content.</p>
+                    </div>
+                    <img src={backpack} className="card-img-top" alt="..."/>
+                    <div className="card-footer">
+                        <small className="text-body-secondary">In stock - Price : 15.00$</small>
+                    </div>
+                </div>
+
             </div>
-            <div className="card">
-                <img src="..." className="card-img-top" alt="..."/>
-                <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">This card has supporting text below as a natural lead-in to additional
-                        content.</p>
-                </div>
-                <div className="card-footer">
-                    <small className="text-body-secondary">Last updated 3 mins ago</small>
-                </div>
-            </div>
-            <div className="card">
-                <img src="..." className="card-img-top" alt="..."/>
-                <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This card has even longer content than the first to show that equal height
-                        action.</p>
-                </div>
-                <div className="card-footer">
-                    <small className="text-body-secondary">Last updated 3 mins ago</small>
-                </div>
-            </div>
-        </div>
 
     )
 

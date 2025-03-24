@@ -5,6 +5,8 @@ import Charities from "./pages/Charities.jsx";
 import Wallet from "./pages/Wallet.jsx";
 import Store from "./pages/Store.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import Navbar from "./throw/Navbar.jsx";
+import Footer from "./throw/Footer.jsx";
 
 
 function App() {
@@ -26,6 +28,7 @@ function App() {
                 </Routes>
 
             </div>
+
         </BrowserRouter>
     )
 }
