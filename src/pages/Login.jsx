@@ -12,23 +12,7 @@ const Login = (setAuth) => {
         setUser({...user, [e.target.name]: e.target.value});
     }
 
-    const _login() = async (e) => {
 
-        e.preventDefault();
-        try {
-
-          //  const feedback = await axios.post('http://localhost:8181/') // TODO controller method
-            if (feedback.data){
-                setAuth(true);
-                navigate("/");
-            }else {
-                setError(true)
-            }
-        }catch (err){
-            console.error("Login error", err)
-            setError(true)
-        }
-    }
 
     return (
 
