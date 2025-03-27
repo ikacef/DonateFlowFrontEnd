@@ -4,29 +4,44 @@ import { useNavigate } from "react-router-dom";
 
 const Login = (setAuth) => {
 
-    const [user, setUser] = useState({username : "", password : ""});
+    const [client, setClient] = useState({username : "", password : ""});
     const [error, setError] = useState(false);
     const navigate = useNavigate();
 
-    const userInfo = (e) => {
-        setUser({...user, [e.target.name]: e.target.value});
+    const clientInfo = (e) => {
+        setClient({...client, [e.target.name]: e.target.value});
     }
 
+    const clientLogIn= async (e) => {
+        e.preventDefault();
+        try {
+            const response = await axios.post(`http://localhost:8181/client/logIn/${client.username}/${client.password}`,);
+            if (response.data) {
+                setAuth(true);
+                navigate("/");
+            } else {
+                setError(true);
+            }
+        } catch (err) {
+            console.error("Login error", err);
+            setError(true);
+        }
+    };
 
 
     return (
 
         <div>
 
-            <form onSubmit={_login}>
+            <form onSubmit={clientLogIn}>
 
-                <input type="text" name="username" placeholder="username" onChange={userInfo}/>
-                <input type="password" name="password" placeholder="password" onChange={userInfo}/>
+                <input type="text" name="username" placeholder="username" onChange={clientInfo}/>
+                <input type="password" name="password" placeholder="password" onChange={clientInfo}/>
                 <button id="loginButton" type="submit">Login</button>
 
             </form>
 
-            {error && <span style={{color:"red"}}>Wrong userInfo</span>}
+            {error && <span style={{color:"red"}}>Wrong info</span>}
 
         </div>
 
