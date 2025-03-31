@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -18,7 +18,7 @@ const Login = (setAuth) => {
             const response = await axios.post(`http://localhost:8181/client/logIn/${client.username}/${client.password}`,);
             if (response.data) {
                 setAuth(true);
-                navigate("/");
+                navigate("/home");
             } else {
                 setError(true);
             }
@@ -34,6 +34,8 @@ const Login = (setAuth) => {
         <div>
 
             <form onSubmit={clientLogIn}>
+
+                <h2>Access our website with your client info</h2>
 
                 <input type="text" name="username" placeholder="username" onChange={clientInfo}/>
                 <input type="password" name="password" placeholder="password" onChange={clientInfo}/>

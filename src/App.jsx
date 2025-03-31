@@ -7,10 +7,13 @@ import Store from "./pages/store/Store.jsx";
 import NotFound from "./pages/utils/NotFound.jsx";
 import Navbar from "./pages/display/Navbar.jsx";
 import Footer from "./pages/display/Footer.jsx";
+import Login from "./pages/Login.jsx";
+import {useState} from "react";
 
 
 function App() {
 
+    const [auth, setAuth] = useState(false);
 
     return (
         <BrowserRouter>
@@ -19,7 +22,8 @@ function App() {
 
                 <Routes>
 
-                    <Route path="/" element={<Home/>} />
+                    <Route path="/" element={<Login setAuth={setAuth}/>}/>
+                    <Route path="/home" element={<Home auth={auth} setAuth={setAuth} />} />
                     <Route path="/charity" element={<Charities/>} />
                     <Route path="/wallet" element={<Wallet/>} />
                     <Route path="/store" element={<Store/>} />
