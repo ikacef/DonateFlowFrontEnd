@@ -13,6 +13,8 @@ import {useState} from "react";
 
 function App() {
 
+    //<Route path="/" element={<Login setAuth={setAuth}/>}/>
+
     const [auth, setAuth] = useState(false);
 
     return (
@@ -22,8 +24,8 @@ function App() {
 
                 <Routes>
 
-                    <Route path="/" element={<Login setAuth={setAuth}/>}/>
-                    <Route path="/home" element={<Home auth={auth} setAuth={setAuth} />} />
+
+                    <Route path="/" element={<Home auth={auth} setAuth={setAuth} />} />
                     <Route path="/charity" element={<Charities/>} />
                     <Route path="/wallet" element={<Wallet/>} />
                     <Route path="/store" element={<Store/>} />

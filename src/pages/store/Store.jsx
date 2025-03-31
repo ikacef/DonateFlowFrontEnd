@@ -10,29 +10,11 @@ import backpack from "../../img/backpack.jpg";
 
 function Store() {
 
-
-    const items = [
-        {
-
-            id:1,
-            title: "",
-            description: "",
-            price: 1,
-            image: "",
-            inStock: ""
-
-        }
-    ]
-
-
-
-
     const handleBuy = () => {
 
         alert("allo");
 
     }
-
 
     return (
 

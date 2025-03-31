@@ -9,10 +9,10 @@ import NavbarHome from "./NavbarHome.jsx";
 function Home(auth, setAuth) {
     const navigate  = useNavigate();
 
-    if (!auth) {
+   /* if (!auth) {
         navigate("/");
         return null;
-    }
+    }*/
 
     return (
 

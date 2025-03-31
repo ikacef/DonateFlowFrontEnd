@@ -18,7 +18,7 @@ const Login = (setAuth) => {
             const response = await axios.post(`http://localhost:8181/client/logIn/${client.username}/${client.password}`,);
             if (response.data) {
                 setAuth(true);
-                navigate("/home");
+                navigate("/"); // replace by home
             } else {
                 setError(true);
             }

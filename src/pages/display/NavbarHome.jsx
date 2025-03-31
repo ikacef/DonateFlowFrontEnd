@@ -7,7 +7,7 @@ function NavbarHome(){
 
 
     const navigateToHome = () => {
-        navigate('/home');
+        navigate('/'); // replace by home
     };
 
     const navigateToStore = () => {
