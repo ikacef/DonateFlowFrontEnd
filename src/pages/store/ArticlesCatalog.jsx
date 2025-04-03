@@ -6,14 +6,14 @@ import soccerball from "../../img/soccerball.jpg";
 import monitor from "../../img/monitor.jpg";
 import backpack from "../../img/backpack.jpg";
 
-const itemsCatalog = [
+const articlesCatalog = [
 
         {
             id:1,
             title: "Visa gift card",
             description: "Prepaid visa card with unlimited benefits and a value of a hundred dollars.",
             price: 100.00,
-            image: {visa},
+            image: visa,
             inStock: true
         },
         {
@@ -21,7 +21,7 @@ const itemsCatalog = [
             title: "Card wallet",
             description: "An aestethically pleasing wallet with futuristic features containing ample card space while maintaining a low transport volume",
             price: 25.00,
-            image: {wallet},
+            image: wallet,
             inStock: true
         },
         {
@@ -29,7 +29,7 @@ const itemsCatalog = [
             title: "Flow water 50 pack",
             description: "Exclusive pack format in sponsorship with the Flow water beverage company and a limited edition flavor. Get it while you can !!!",
             price: 45.00,
-            image: {bottle},
+            image: bottle,
             inStock: true
         },
         {
@@ -37,7 +37,7 @@ const itemsCatalog = [
             title: "Signed soccer ball",
             description: "Famous soccer player and all-time great Pele signed soccer ball from his infamous 8 goal game.",
             price: 200.00,
-            image: {soccerball},
+            image: soccerball,
             inStock: true
         },
         {
@@ -45,7 +45,7 @@ const itemsCatalog = [
             title: "LG UltraGear monitor",
             description: "Newest generation Lg UltraGear monitor with advanced graphic display and latest technology graphic resolution tailord for hig-level gaming or streaming",
             price: 500.00,
-            image: {monitor},
+            image: monitor,
             inStock: true
         },
         {
@@ -53,14 +53,14 @@ const itemsCatalog = [
             title: "Crypto backpack",
             description: "Crypto designed backpack for crypto fans or users with a unique color scheme. LIMITED EDITION ***",
             price: 15.00,
-            image: {backpack},
+            image: backpack,
             inStock: true
         }
-    ]
+    ];
 
-function getItemCatalog(id){
+function getArticleCatalog(id){
 
-    let itemData = itemsCatalog.find(item => item.id === id)
+    let itemData = articlesCatalog.find(article => article.id === id)
 
     if (itemData == undefined){
         console.log("Item not found");
@@ -71,4 +71,4 @@ function getItemCatalog(id){
 
 }
 
-export default {itemsCatalog, getItemCatalog};
+export { articlesCatalog, getArticleCatalog};

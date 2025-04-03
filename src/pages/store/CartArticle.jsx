@@ -1,15 +1,15 @@
 import Button from 'react-bootstrap/Button';
 import { useContext } from "react";
 import {CartView} from "./CartUtils.jsx";
-import {getItemCatalog} from "./itemsCatalog.jsx";
+import {getArticleCatalog} from "./ArticlesCatalog.jsx";
 
 
-function CartItem(props){
+function CartArticle(props){
 
     const cart = useContext(CartView);
     const id = props.id;
     const quantity = props.quantity;
-    const itemData = getItemCatalog(id);
+    const itemData = getArticleCatalog(id);
 
     return(
 
@@ -23,4 +23,4 @@ function CartItem(props){
 
     )
 
-}export default CartItem
+}export default CartArticle

@@ -9,6 +9,7 @@ import Navbar from "./pages/display/Navbar.jsx";
 import Footer from "./pages/display/Footer.jsx";
 import Login from "./pages/Login.jsx";
 import {useState} from "react";
+import Store_ from "./pages/store/Store_.jsx";
 
 
 function App() {

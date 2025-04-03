@@ -1,11 +1,11 @@
 import { createContext, useState } from "react";
-import {getItemCatalog} from "./itemsCatalog.jsx";
+import {getArticleCatalog} from "./ArticlesCatalog.jsx";
 
 
 
 export const CartView = createContext({
 
-    items: [],
+    articles: [],
     getItemQuantity: () => {},
     addItemToCart: () => {},
     removeItemFromCart: () => {},
@@ -19,7 +19,7 @@ function  Cart(cart){
     const [cartItems, setCartItems] = useState([]);
 
     function getItemQuantity(id){
-        const quantity = cartItems.find(item => item.id === id)?.quantity;
+        const quantity = cartItems.find(article => article.id === id)?.quantity;
 
         if (quantity === undefined){
             return 0;
@@ -44,7 +44,7 @@ function  Cart(cart){
         }else {
             setCartItems(
                 cartItems.map(
-                    item => item.id === id ? {...item, quantity: item.quantity + 1} : item
+                    article => article.id === id ? {...article, quantity: article.quantity + 1} : article
                 )
             )
         }
@@ -58,7 +58,7 @@ function  Cart(cart){
         }else {
             setCartItems(
                 cartItems.map(
-                    item => item.id === id ? {...item, quantity: item.quantity - 1} : item
+                    article => article.id === id ? {...article, quantity: article.quantity - 1} : article
                 )
             )
         }
@@ -67,8 +67,8 @@ function  Cart(cart){
     function deleteItemFromCart(id){
 
         setCartItems(
-            cartItems => cartItems.filter(item => {
-                return item.id != id;
+            cartItems => cartItems.filter(article => {
+                return article.id != id;
             })
         )
     }
@@ -76,14 +76,14 @@ function  Cart(cart){
     function getCartCostTotal(){
         let cost = 0;
         cartItems.map((cartItem) => {
-            const itemData = getItemCatalog(cartItem.id);
+            const itemData = getArticleCatalog(cartItem.id);
             cost += (itemData.price * cartItem.quantity);
         });
         return cost;
     }
 
     const cartViewValue = {
-        items : cartItems,
+        articles : cartItems,
         getItemQuantity,
         addItemToCart,
         removeItemFromCart,
