@@ -1,8 +1,8 @@
 import "react";
-import './footer.css';
-import logo1 from "../img/logo1.png";
-import logo2 from "../img/logo2.png";
-import logo3 from "../img/logo3.png";
+import '../../styles/footer.css';
+import logo1 from "../../img/logo1.png";
+import logo2 from "../../img/logo2.png";
+import logo3 from "../../img/logo3.png";
 
 
 
@@ -16,18 +16,18 @@ function Footer(){
             <div className="foot-links">
                 <h4 className="links-title">Quick Links</h4>
                 <ul className="link-list">
-                    <li><a href="../pages/Service.jsx">About us</a></li>
-                    <li><a href="../pages/Service.jsx">How it works</a></li>
-                    <li><a href="../pages/Service.jsx">FAQs</a></li>
+                    <li><a href="../utils/Service.jsx">About us</a></li>
+                    <li><a href="../utils/Service.jsx">How it works</a></li>
+                    <li><a href="../utils/Service.jsx">FAQs</a></li>
                 </ul>
             </div>
 
             <div className="foot-source">
                 <h4 className="links-title">Ressources</h4>
                 <ul className="source-list">
-                    <li><a href="../pages/Service.jsx">Documentaion</a></li>
-                    <li><a href="../pages/Service.jsx">Support</a></li>
-                    <li><a href="../pages/Service.jsx">Contact</a></li>
+                    <li><a href="../utils/Service.jsx">Documentaion</a></li>
+                    <li><a href="../utils/Service.jsx">Support</a></li>
+                    <li><a href="../utils/Service.jsx">Contact</a></li>
                 </ul>
             </div>
 
