@@ -1,10 +1,10 @@
 import "react"
-import visa from "../../img/visa.jpg";
-import wallet from "../../img/wallet.jpg";
-import bottle from "../../img/bottle.jpg";
-import soccerball from "../../img/soccerball.jpg";
-import monitor from "../../img/monitor.jpg";
-import backpack from "../../img/backpack.jpg";
+import visa from "../../../../DonateFlowBackEnd/data/img/visa.jpg";
+import wallet from "../../../../DonateFlowBackEnd/data/img/wallet.jpg";
+import bottle from "../../../../DonateFlowBackEnd/data/img/bottle.jpg";
+import soccerball from "../../../../DonateFlowBackEnd/data/img/soccerball.jpg";
+import monitor from "../../../../DonateFlowBackEnd/data/img/monitor.jpg";
+import backpack from "../../../../DonateFlowBackEnd/data/img/backpack.jpg";
 
 const articlesCatalog = [
 

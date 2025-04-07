@@ -1,12 +1,12 @@
 import "react";
 import "../../styles/store.css";
 
-import visa from "../../img/visa.jpg";
-import wallet from "../../img/wallet.jpg";
-import bottle from "../../img/bottle.jpg";
-import soccerball from "../../img/soccerball.jpg";
-import monitor from "../../img/monitor.jpg";
-import backpack from "../../img/backpack.jpg";
+import visa from "../../../../DonateFlowBackEnd/data/img/visa.jpg";
+import wallet from "../../../../DonateFlowBackEnd/data/img/wallet.jpg";
+import bottle from "../../../../DonateFlowBackEnd/data/img/bottle.jpg";
+import soccerball from "../../../../DonateFlowBackEnd/data/img/soccerball.jpg";
+import monitor from "../../../../DonateFlowBackEnd/data/img/monitor.jpg";
+import backpack from "../../../../DonateFlowBackEnd/data/img/backpack.jpg";
 
 function Store() {
 
@@ -30,7 +30,7 @@ function Store() {
                 <img src={visa} className="card-img-top" id="img1"/>
                 <div className="card-footer">
                     <small className="text-body-secondary">In stock - Price : 100.00$</small>
-                    <button className="buyButton" onClick={handleBuy}>Buy</button>
+                    <button className="buyButton" onClick={handleBuy}>Add produit</button>
                 </div>
             </div>
 

@@ -10,6 +10,7 @@ import Footer from "./pages/display/Footer.jsx";
 import Login from "./pages/Login.jsx";
 import {useState} from "react";
 import Store_ from "./pages/store/Store_.jsx";
+import ArticleBD from "./pages/store/ArticleBD.jsx";
 
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
                     <Route path="/" element={<Home auth={auth} setAuth={setAuth} />} />
                     <Route path="/charity" element={<Charities/>} />
                     <Route path="/wallet" element={<Wallet/>} />
-                    <Route path="/store" element={<Store/>} />
+                    <Route path="/store" element={<ArticleBD/>} />
                     <Route path="*" element={<NotFound/>} />
 
                 </Routes>
