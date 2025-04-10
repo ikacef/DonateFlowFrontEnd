@@ -21,11 +21,6 @@ function Home(auth, setAuth) {
             <><NavbarHome/></>
 
                 <section className="front">Welcome to our DonateFlow website</section>
-                <button onClick={() => {
-                    setAuth(false);
-                    navigate("/");
-                }}>Logout
-                </button>
 
                 <><Footer/></>
         </header>

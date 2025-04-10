@@ -22,6 +22,10 @@ function NavbarHome(){
         navigate('/charity');
     };
 
+    const handleLogout = () => {
+        navigate('/');
+    }
+
     return (
 
 
@@ -53,11 +57,10 @@ function NavbarHome(){
 
                     <img src={logo} className="logoFlow"></img>
 
-                    <form className="d-flex" role="search">
-                        <input className="searchBar form-control me-2" type="search"
-                               placeholder="Find what you're looking for here" aria-label="Search"/>
-                        <button className="searchButton " type="submit">Search</button>
-                    </form>
+                    <section className="d-flex" role="search">
+                        <button onClick={handleLogout}></button>
+                        <button className="searchButton" type="submit">Logout</button>
+                    </section>
                 </div>
             </div>
         </nav>

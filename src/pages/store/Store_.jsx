@@ -1,5 +1,5 @@
 import {Row,Col} from "react-bootstrap";
-import {articlesCatalog} from "./ArticlesCatalog.jsx"
+import {articlesCatalog} from "../../testFolder/ArticlesCatalog.jsx"
 import Article from "./Article.jsx";
 
 
