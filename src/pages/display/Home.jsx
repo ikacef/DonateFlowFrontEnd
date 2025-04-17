@@ -1,13 +1,13 @@
 import "react";
 import "../../styles/home.css";
 
-import {useNavigate} from "react-router-dom";
+
 import Footer from "./Footer.jsx";
 import NavbarHome from "./NavbarHome.jsx";
 
 
-function Home(auth, setAuth) {
-    const navigate  = useNavigate();
+function Home() {
+
 
    /* if (!auth) {
         navigate("/");

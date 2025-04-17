@@ -1,7 +1,7 @@
 .navbar{
-    position: fixed;
     top: 0;
     right: 0;
+    position: absolute;
     background-color: #003f67;
     width: 100%;
 }.logoFLow{margin-right: 500px; width: 10%}
@@ -13,7 +13,7 @@
 
 .navElement{
     margin-left: 50px;
-    color: white;
+    color: black;
 }.navElement:hover{color: lightgreen; text-decoration: underline;}
 
 .searchButton{

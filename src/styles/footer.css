@@ -1,1 +1,45 @@
+.footer-main{
+    color: white;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #003f67;
+    font-family: "Times New Roman";
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+.foot1{
+    text-align: justify-all;
+}
+.footer-title{
+    font-family: "Courier New";
+}
+.footer-bottom{
+    text-decoration: underline;
+    position: absolute;
+    bottom: 0;
+}
+.link-list, .source-list{
+    list-style: none;
+    text-decoration: none;
+    text-align: left;
+}
+.foot-source, .foot-links, .foot1{
+    margin-left: 100px;
+}
+
+.images{
+    display: flex;
+    right: 0;
+    position: absolute;
+    margin-top: 50px;
+    margin-right: 50px;
+}
+.logo1, .logo2, .logo3{
+    width: 100px;
+    height: 50px;
+    margin-left: 5px;
+}
 

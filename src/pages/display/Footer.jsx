@@ -11,7 +11,7 @@ function Footer(){
 
     return (
 
-        <footer className="footer-main">
+        <footer className="footer-main ">
 
             <div className="foot-links">
                 <h4 className="links-title">Quick Links</h4>

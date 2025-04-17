@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 import axios from 'axios';
-import {data, Link} from "react-router-dom";
+
 
 function ProductsList() {
     const [listProducts, setListProducts] = useState([]);

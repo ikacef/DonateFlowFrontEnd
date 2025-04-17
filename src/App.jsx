@@ -4,9 +4,6 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Charities from "./pages/Charities.jsx";
 import Wallet from "./pages/Wallet.jsx";
 import NotFound from "./pages/utils/NotFound.jsx";
-import Navbar from "./pages/display/Navbar.jsx";
-import Footer from "./pages/display/Footer.jsx";
-import Login from "./pages/Login.jsx";
 import {useState} from "react";
 import ProductsList from "./pages/store/ProductsList.jsx";
 

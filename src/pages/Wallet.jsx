@@ -1,4 +1,5 @@
-import React from 'react';
+import  'react';
+import "../styles/wallet.css"
 
 const Wallet = () => {
     const user = {
@@ -48,7 +49,7 @@ const Wallet = () => {
     ];
 
     return (
-        <div className="container mt-5">
+        <div className="walletMain container mt-5">
             <h2 className="text-center mb-4">My Wallet</h2>
 
             {/* Solde */}
