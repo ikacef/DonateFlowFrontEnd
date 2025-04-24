@@ -33,7 +33,7 @@ const Charities = () => {
                     <div className="col-md-4">
                         <div className="card h-100">
                             <div className="position-relative">
-                                <img src="https://via.placeholder.com/400x200" className="card-img-top" alt="Save the Children" />
+                                <img src="" className="card-img-top" alt="Save the Children" />
                                 <span className="badge bg-success position-absolute top-0 end-0 m-2">Verified</span>
                             </div>
                             <div className="card-body">
@@ -52,7 +52,7 @@ const Charities = () => {
                     <div className="col-md-4">
                         <div className="card h-100">
                             <div className="position-relative">
-                                <img src="https://via.placeholder.com/400x200" className="card-img-top" alt="Green Earth Project" />
+                                <img src="" className="card-img-top" alt="Green Earth Project" />
                                 <span className="badge bg-success position-absolute top-0 end-0 m-2">Verified</span>
                             </div>
                             <div className="card-body">

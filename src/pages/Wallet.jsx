@@ -110,7 +110,6 @@ const Wallet = () => {
                             </select>
                         </div>
                     </div>
-                    <p className="text-muted mt-2">* Filters are visual only — no logic implemented.</p>
                 </div>
             </div>
 

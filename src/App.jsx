@@ -6,11 +6,11 @@ import Wallet from "./pages/Wallet.jsx";
 import NotFound from "./pages/utils/NotFound.jsx";
 import {useState} from "react";
 import ProductsList from "./pages/store/ProductsList.jsx";
+import Login from "./pages/Login.jsx";
 
 
 function App() {
 
-    //<Route path="/" element={<Login setAuth={setAuth}/>}/>
 
     const [auth, setAuth] = useState(false);
 
@@ -21,8 +21,8 @@ function App() {
 
                 <Routes>
 
-
-                    <Route path="/" element={<Home auth={auth} setAuth={setAuth} />} />
+                    <Route path="/*" element={<Login auth={auth} setAuth={setAuth}/>}/>
+                    <Route path="/" element={<Home/>} />
                     <Route path="/charity" element={<Charities/>} />
                     <Route path="/wallet" element={<Wallet/>} />
                     <Route path="/store" element={<ProductsList/>} />

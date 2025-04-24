@@ -5,20 +5,20 @@ import { useNavigate } from "react-router-dom";
 const Login = (setAuth) => {
 
     const [client, setClient] = useState({username : "", password : ""});
-    const [error, setError] = useState(false);
+    const [, setError] = useState(false);
     const navigate = useNavigate();
 
     const clientInfo = (e) => {
         setClient({...client, [e.target.name]: e.target.value});
     }
 
-    const clientLogIn= async (e) => {
+    const clientSignUp= async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(`http://localhost:8181/client/logIn/${client.username}/${client.password}`,);
+            const response = await axios.post(`http://localhost:8181/api/auth/signup`);
             if (response.data) {
                 setAuth(true);
-                navigate("/"); // replace by home
+                navigate("/home"); // replace by home
             } else {
                 setError(true);
             }
@@ -33,20 +33,18 @@ const Login = (setAuth) => {
 
         <div>
 
-            <form onSubmit={clientLogIn}>
+            <form onSubmit={clientSignUp}>
 
                 <h2>Access our website with your client info</h2>
 
                 <input type="text" name="username" placeholder="username" onChange={clientInfo}/>
                 <input type="password" name="password" placeholder="password" onChange={clientInfo}/>
-                <button id="loginButton" type="submit">Login</button>
+                <button id="loginButton" type="submit">Sign in</button>
+                <button id="loginButton" type="submit">Sign up</button>
 
             </form>
 
-            {error && <span style={{color:"red"}}>Wrong info</span>}
-
         </div>
-
 
 
     )
