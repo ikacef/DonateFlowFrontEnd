@@ -1,0 +1,16 @@
+.search-filter {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    background-color: #f9fafb;
+    border-bottom: 1px solid #ddd;
+}
+
+.search-filter input, .search-filter select {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    min-width: 180px;
+}

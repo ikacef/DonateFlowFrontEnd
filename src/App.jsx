@@ -6,6 +6,8 @@ import Wallet from "./pages/Wallet.jsx";
 import NotFound from "./pages/utils/NotFound.jsx";
 import {useState} from "react";
 import ProductsList from "./pages/store/ProductsList.jsx";
+import Test from "./pages/test/Test.jsx";
+import TestHome from "./pages/test/testHome.jsx";
 
 
 function App() {
@@ -27,6 +29,8 @@ function App() {
                     <Route path="/wallet" element={<Wallet/>} />
                     <Route path="/store" element={<ProductsList/>} />
                     <Route path="*" element={<NotFound/>} />
+                    <Route path="/test" element={<Test/>} />
+                    <Route path="/testh" element={<TestHome/>} />
 
                 </Routes>
 
