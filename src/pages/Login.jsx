@@ -1,48 +1,57 @@
 import  { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import error from "eslint-plugin-react/lib/util/error.js";
 
 const Login = (setAuth) => {
 
-    const [client, setClient] = useState({username : "", password : ""});
-    const [, setError] = useState(false);
-    const navigate = useNavigate();
+   // const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
+    const [signUp, setSignUp] = useState("Sign up")
 
-    const clientInfo = (e) => {
-        setClient({...client, [e.target.name]: e.target.value});
+    const [client, setClient] =useState({
+        username:"",
+        password:""
+    })
+
+    const setInfo = (e) => {
+        const value = e.target.value;
+        setClient({...client, [e.target.name]: value})
     }
 
-    const clientSignUp= async (e) => {
+    const createClient = (e) => {
         e.preventDefault();
-        try {
-            const response = await axios.post(`http://localhost:8181/api/auth/signup`);
-            if (response.data) {
-                setAuth(true);
-                navigate("/home"); // replace by home
-            } else {
-                setError(true);
-            }
-        } catch (err) {
-            console.error("Login error", err);
-            setError(true);
-        }
-    };
+        axios.post("http://localhost:8181/api/clients/createClient", client)
+            .then(() => {
+                navigate("/")
+            }).catch((error) => {
+            console.log(error)
+        })
+    }
+
+
+
 
 
     return (
 
         <div>
 
-            <form onSubmit={clientSignUp}>
 
-                <h2>Access our website with your client info</h2>
 
-                <input type="text" name="username" placeholder="username" onChange={clientInfo}/>
-                <input type="password" name="password" placeholder="password" onChange={clientInfo}/>
-                <button id="loginButton" type="submit">Sign in</button>
-                <button id="loginButton" type="submit">Sign up</button>
+                <form >
 
-            </form>
+                    <label>username</label>
+                    <input type="text" placeholder="Username"  onChange={(e) => setInfo(e)} value={client.username}/>
+
+                    <label>password</label>
+                    <input type="text" placeholder="Password" required onChange={(e) => setInfo(e)} value={client.password}/>
+
+                    <button type="submit" onClick={createClient}>Sign Up</button>
+                </form>
+
+
+
 
         </div>
 
