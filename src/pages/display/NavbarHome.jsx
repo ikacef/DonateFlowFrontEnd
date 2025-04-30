@@ -19,8 +19,8 @@ function NavbarHome(){
         navigate('/wallet');
     };
 
-    const navigateToCharity = () => {
-        navigate('/charity');
+    const navigateToCampaign = () => {
+        navigate('/campaign');
     };
 
     const handleLogout = () => {
@@ -42,8 +42,8 @@ function NavbarHome(){
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
                             <a className="navElement nav-link " aria-current="page"
-                               onClick={navigateToCharity}
-                               role="button">Charities</a>
+                               onClick={navigateToCampaign}
+                               role="button">Campaigns</a>
                         </li>
                         <li className="nav-item">
                             <a className="navElement nav-link " aria-current="page"

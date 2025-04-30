@@ -20,9 +20,9 @@ function ProductsList() {
     };
 
     useEffect(() => {
+        console.log("Chargement des produits...");
         loadAllProducts();
     }, []);
-
 
 
 
@@ -30,15 +30,18 @@ function ProductsList() {
         <div className="mt-5 container">
             <div className="card">
                 <div className='card-header'>
-                    Liste des Customers:
+                    Liste des Produits:
                 </div>
                 <div className='card-body'>
                     <table className='table table-hover'>
                         <thead>
                         <tr>
-                            <th>pName</th>
-                            <th>pDesc</th>
-                            <th>pPrice</th>
+                            <th>Name</th>
+                            <th>Desc</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Category</th>
+
 
                         </tr>
                         </thead>
@@ -46,9 +49,11 @@ function ProductsList() {
                         {
                             listProducts.map((data, i) => (
                                 <tr key={i}>
-                                    <td>{data.productName}</td>
-                                    <td>{data.productDescription}</td>
-                                    <td>{data.productPrice}</td>
+                                    <td>{data.name}</td>
+                                    <td>{data.description}</td>
+                                    <td>{data.price}</td>
+                                    <td>{data.stock}</td>
+                                    <td>{data.category}</td>
                                 </tr>
                             ))
                         }
@@ -63,11 +68,3 @@ function ProductsList() {
 
 export default ProductsList;
 
-/**
- *   useEffect(() => {
- *         axios.get("https://jsonplaceholder.typicode.com/users")
- *             .then(res => setTabUsers(res.data))
- *             .catch(err => console.log(err));
- *     },
- *       []);
- */
