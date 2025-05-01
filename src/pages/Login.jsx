@@ -34,7 +34,7 @@ const Login = () => {
                 alert("Compte créé avec succès !");
             }
 
-            navigate("/");
+            navigate("/home");
 
         } catch (error) {
             console.error("Erreur:", error);

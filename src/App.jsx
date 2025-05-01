@@ -22,7 +22,7 @@ function App() {
                 <Routes>
 
                     <Route path="/*" element={<Login auth={auth} setAuth={setAuth}/>}/>
-                    <Route path="/home" element={<Home/>} />
+                    <Route path="/" element={<Home/>} />
                     <Route path="/campaign" element={<Campaigns/>} />
                     <Route path="/wallet" element={<Wallet/>} />
                     <Route path="/store" element={<ProductsList/>} />
