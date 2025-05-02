@@ -2,15 +2,20 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const Login = () => {
-    const navigate = useNavigate();
+// TODO CSS
 
+const Login = () => {
+
+
+    const navigate = useNavigate();
     const [client, setClient] = useState({
         username: "",
         password: ""
     });
-
     const [isLoginMode, setIsLoginMode] = useState(true); // true = Login, false = Sign Up
+
+
+
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -22,25 +27,32 @@ const Login = () => {
 
         const url = isLoginMode
             ? "http://localhost:8181/api/clients/login"
-            : "http://localhost:8181/api/clients/createClient";
+            : "http://localhost:8181/api/clients/signup";
 
         try {
-            const response = await axios.post(url, client);
+            const payload = isLoginMode
+                ? { username: client.username, password: client.password }
+                : client;
+
+            const response = await axios.post(url, payload);
 
             if (isLoginMode) {
                 alert("Connexion réussie !");
-                // Tu peux ici stocker un token ou un utilisateur dans localStorage si besoin
+                localStorage.setItem("client", JSON.stringify(response.data));
+                navigate("/home");
             } else {
-                alert("Compte créé avec succès !");
+                alert("Inscription réussie ! Connectez-vous maintenant.");
+                setIsLoginMode(true);
+                setClient({ ...client, password: "" });
             }
-
-            navigate("/home");
 
         } catch (error) {
             console.error("Erreur:", error);
-            alert("Une erreur est survenue. Vérifie les informations saisies.");
+            alert(error.response?.data || "Erreur lors de la requête.");
         }
     };
+
+
 
     const toggleMode = () => {
         setIsLoginMode(!isLoginMode);

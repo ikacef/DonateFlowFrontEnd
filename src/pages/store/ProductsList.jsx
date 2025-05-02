@@ -24,6 +24,10 @@ function ProductsList() {
         loadAllProducts();
     }, []);
 
+    const handleBuy = () => {
+        // TODO API
+    }
+
 
 
     return (
@@ -41,6 +45,7 @@ function ProductsList() {
                             <th>Price</th>
                             <th>Stock</th>
                             <th>Category</th>
+                            <th>Buy Now</th>
 
 
                         </tr>
@@ -54,6 +59,7 @@ function ProductsList() {
                                     <td>{data.price}</td>
                                     <td>{data.stock}</td>
                                     <td>{data.category}</td>
+                                    <button onClick={handleBuy}>Buy</button>
                                 </tr>
                             ))
                         }

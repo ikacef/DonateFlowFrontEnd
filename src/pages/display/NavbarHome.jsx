@@ -24,7 +24,7 @@ function NavbarHome(){
     };
 
     const handleLogout = () => {
-        navigate('/');
+        navigate('/*');
     }
 
     return (
@@ -59,8 +59,8 @@ function NavbarHome(){
                     <img src={logo} className="logoFlow"></img>
 
                     <section className="d-flex" role="search">
-                        <button onClick={handleLogout}></button>
-                        <button className="searchButton" type="submit">Logout</button>
+                        <button onClick={handleLogout}>Logout</button>
+
                     </section>
                 </div>
             </div>
