@@ -1,5 +1,7 @@
 import  'react';
 import "../styles/wallet.css"
+import NavbarHome from "./display/NavbarHome.jsx";
+import Footer from "./display/Footer.jsx";
 
 const Wallet = () => {
     const user = {
@@ -49,6 +51,7 @@ const Wallet = () => {
     ];
 
     return (
+
         <div className="walletMain container mt-5">
             <h2 className="text-center mb-4">My Wallet</h2>
 
@@ -168,6 +171,7 @@ const Wallet = () => {
                     </nav>
                 </div>
             </div>
+
         </div>
     );
 };

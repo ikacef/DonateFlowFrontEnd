@@ -1,5 +1,7 @@
 import {useState, useEffect} from 'react';
 import axios from 'axios';
+import NavbarHome from "../display/NavbarHome.jsx";
+import Footer from "../display/Footer.jsx";
 
 
 function ProductsList() {
@@ -32,6 +34,7 @@ function ProductsList() {
 
     return (
         <div className="mt-5 container">
+            <><NavbarHome/>v</>
             <div className="card">
                 <div className='card-header'>
                     Liste des Produits:
@@ -67,6 +70,7 @@ function ProductsList() {
                     </table>
                 </div>
             </div>
+            <><Footer/></>
         </div>
 
     );
