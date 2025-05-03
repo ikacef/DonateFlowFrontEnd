@@ -9,11 +9,6 @@ import NavbarHome from "./NavbarHome.jsx";
 function Home() {
 
 
-   /* if (!auth) {
-        navigate("/");
-        return null;
-    }*/
-
     return (
 
         <header className="home">
