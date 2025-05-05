@@ -1,7 +1,7 @@
 import  'react';
-import "../styles/wallet.css"
-import NavbarHome from "./display/NavbarHome.jsx";
-import Footer from "./display/Footer.jsx";
+import "../../styles/wallet.css"
+import NavbarHome from "../display/NavbarHome.jsx";
+import Footer from "../display/Footer.jsx";
 
 const Wallet = () => {
     const user = {

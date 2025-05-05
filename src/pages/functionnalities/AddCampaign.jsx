@@ -1,7 +1,9 @@
 import axios from 'axios';
 import { useState } from 'react';
+import {useNavigate} from "react-router-dom";
 
 function AddCampaign() {
+    const navigate  = useNavigate();
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [goalAmount, setGoalAmount] = useState(0.00);
@@ -23,6 +25,10 @@ function AddCampaign() {
         } catch (error) {
             console.error("Erreur de création :", error.response?.data || error.message);
         }
+    };
+
+    const navigateToCampaign = () => {
+        navigate('/campaign');
     };
 
     return (
@@ -56,7 +62,7 @@ function AddCampaign() {
                 placeholder="Montant actuel (ex: 0.00)"
                 required
             />
-            <button type="submit">Créer la campagne</button>
+            <button type="submit" onClick={navigateToCampaign}>Créer la campagne</button>
         </form>
     );
 }

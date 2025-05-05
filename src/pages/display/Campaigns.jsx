@@ -1,7 +1,7 @@
 import "react";
-import NavbarHome from "./display/NavbarHome.jsx";
-import Footer from "./display/Footer.jsx";
-import "../styles/charities.css";
+import NavbarHome from "./NavbarHome.jsx";
+import Footer from "./Footer.jsx";
+import "../../styles/charities.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
@@ -82,7 +82,7 @@ function Campaigns() {
                                     <p className="text-muted">👤 {campaign.creatorUsername}</p>
                                     <p className="card-text">{campaign.description}</p>
                                     <p>
-                                        <strong>Raised:</strong> ${campaign.currentAmount || 0} / ${campaign.goalAmount}
+                                        <strong>Raised:</strong> ${campaign.currentAmount || 0} of ${campaign.goalAmount}
                                     </p>
                                     <button className="btn btn-primary w-100" >Donate Now</button>
                                 </div>
