@@ -16,7 +16,7 @@ function ProductsList() {
      */
 
     const loadAllProducts = async () => {
-        const result = await axios.get("http://localhost:8181/product/getAllProducts");
+        const result = await axios.get("http://localhost:8181/products/getAllProducts");
         console.log(result.data)
         setListProducts(result.data);
     };

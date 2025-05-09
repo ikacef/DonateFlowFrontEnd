@@ -20,13 +20,13 @@ function App() {
         <BrowserRouter>
 
             <div>
-                <AuthProvider>
+
 
                     <Routes>
 
                         <Route path="/" element={<Login />}/>
-                        <Route path="/home" element={<RoutePrivate><Home /></RoutePrivate>} />
-                        <Route path="/campaign" element={<RoutePrivate><Campaigns /></RoutePrivate>} />
+                        <Route path="/home" element={<Home />} />
+                        <Route path="/campaign" element={<Campaigns />} />
                         <Route path="/wallet" element={<Wallet/>} />
                         <Route path="/store" element={<ProductsList/>} />
                         <Route path="/add" element={<AddCampaign/>} />
@@ -34,7 +34,7 @@ function App() {
 
                     </Routes>
 
-                </AuthProvider>
+
 
 
 
