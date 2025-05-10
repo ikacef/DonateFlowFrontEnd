@@ -30,6 +30,40 @@ function ProductsList() {
         // TODO API
     }
 
+    const handleUpdate = async (id) => {
+        const name = prompt("Nouveau nom du produit :");
+        const desc = prompt("Nouvelle description :");
+        const price = prompt("Prix :");
+        const stock = prompt("Stock :");
+        if (!name || !desc || !price || !stock) return;
+
+        try {
+            await axios.put(`http://localhost:8181/products/${id}`, {
+                productName: name,
+                productDescription: desc,
+                productPrice: price,
+                productStock: stock
+            });
+            alert("Produit mis à jour !");
+            loadAllProducts();
+        } catch (err) {
+            alert("Erreur de mise à jour: " + err.response?.data);
+        }
+    };
+
+    const handleDelete = async (id) => {
+        if (!window.confirm("Supprimer ce produit ?")) return;
+
+        try {
+            await axios.delete(`http://localhost:8181/products/${id}`);
+            alert("Produit supprimé !");
+            loadAllProducts();
+        } catch (err) {
+            alert("Erreur de suppression: " + err.response?.data);
+        }
+    };
+
+
 
 
     return (
@@ -63,6 +97,16 @@ function ProductsList() {
                                     <td>{data.stock}</td>
                                     <td>{data.category}</td>
                                     <button onClick={handleBuy}>Buy</button>
+                                    <td>
+                                        <button className="btn btn-sm btn-primary me-2" onClick={handleBuy}>Buy</button>
+                                        <button className="btn btn-sm btn-warning me-2"
+                                                onClick={() => handleUpdate(data.id)}>Modifier
+                                        </button>
+                                        <button className="btn btn-sm btn-danger"
+                                                onClick={() => handleDelete(data.id)}>Supprimer
+                                        </button>
+                                    </td>
+
                                 </tr>
                             ))
                         }

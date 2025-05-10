@@ -20,6 +20,36 @@ function Campaigns() {
         }
     };
 
+    const handleUpdate = async (id) => {
+        const newTitle = prompt("Nouveau titre:");
+        const newDesc = prompt("Nouvelle description:");
+        if (!newTitle || !newDesc) return;
+
+        try {
+            await axios.put(`http://localhost:8181/campaigns/${id}`, {
+                title: newTitle,
+                description: newDesc,
+                isActivee: true
+            });
+            alert("Campagne mise à jour !");
+            loadAllCampaigns();
+        } catch (error) {
+            alert("Erreur de mise à jour: " + error.response?.data);
+        }
+    };
+
+    const handleDelete = async (id) => {
+        if (!window.confirm("Supprimer cette campagne ?")) return;
+
+        try {
+            await axios.delete(`http://localhost:8181/campaigns/${id}`);
+            alert("Campagne supprimée !");
+            loadAllCampaigns();
+        } catch (error) {
+            alert("Erreur de suppression: " + error.response?.data);
+        }
+    };
+
     useEffect(() => {
         loadAllCampaigns();
     }, []);
@@ -97,12 +127,18 @@ function Campaigns() {
                         <button className="btn btn-outline-primary" onClick={handleLoadMore}>
                             Load More Campaigns
                         </button>
+                        <button className="btn btn-warning w-100 my-1"
+                                onClick={() => handleUpdate(campaign.title)}>Modifier
+                        </button>
+                        <button className="btn btn-danger w-100" onClick={() => handleDelete(campaign.title)}>Supprimer
+                        </button>
+
 
                     </div>
                 )}
             </div>
 
-            <Footer />
+            <Footer/>
         </div>
     );
 }
