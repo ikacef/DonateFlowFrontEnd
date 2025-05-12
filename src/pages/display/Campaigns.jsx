@@ -26,7 +26,7 @@ function Campaigns() {
         if (!newTitle || !newDesc) return;
 
         try {
-            await axios.put(`http://localhost:8181/campaigns/${id}`, {
+            await axios.put(`http://localhost:8181/campaigns/update`, {
                 title: newTitle,
                 description: newDesc,
                 isActivee: true
@@ -42,7 +42,7 @@ function Campaigns() {
         if (!window.confirm("Supprimer cette campagne ?")) return;
 
         try {
-            await axios.delete(`http://localhost:8181/campaigns/${id}`);
+            await axios.delete(`http://localhost:8181/campaigns/delete`);
             alert("Campagne supprimée !");
             loadAllCampaigns();
         } catch (error) {
