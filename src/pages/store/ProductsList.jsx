@@ -38,7 +38,7 @@ function ProductsList() {
         if (!name || !desc || !price || !stock) return;
 
         try {
-            await axios.put(`http://localhost:8181/products/${id}`, {
+            await axios.put(`http://localhost:8181/products/update`, {
                 productName: name,
                 productDescription: desc,
                 productPrice: price,
@@ -55,7 +55,7 @@ function ProductsList() {
         if (!window.confirm("Supprimer ce produit ?")) return;
 
         try {
-            await axios.delete(`http://localhost:8181/products/${id}`);
+            await axios.delete(`http://localhost:8181/products/delete`);
             alert("Produit supprimé !");
             loadAllProducts();
         } catch (err) {
@@ -91,12 +91,11 @@ function ProductsList() {
                         {
                             listProducts.map((data, i) => (
                                 <tr key={i}>
-                                    <td>{data.name}</td>
-                                    <td>{data.description}</td>
-                                    <td>{data.price}</td>
-                                    <td>{data.stock}</td>
-                                    <td>{data.category}</td>
-                                    <button onClick={handleBuy}>Buy</button>
+                                    <td>{data.productName}</td>
+                                    <td>{data.productDescription}</td>
+                                    <td>{data.productPrice}</td>
+                                    <td>{data.productStock}</td>
+                                    <td>{data.productCategory}</td>
                                     <td>
                                         <button className="btn btn-sm btn-primary me-2" onClick={handleBuy}>Buy</button>
                                         <button className="btn btn-sm btn-warning me-2"

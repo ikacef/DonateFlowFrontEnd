@@ -26,8 +26,8 @@ const Login = () => {
         e.preventDefault();
 
         const url = isLoginMode
-            ? "http://localhost:8181/api/clients/login"
-            : "http://localhost:8181/api/clients/signup";
+            ? "http://localhost:8181/clients/login"
+            : "http://localhost:8181/clients/signup";
 
         try {
             const payload = isLoginMode
