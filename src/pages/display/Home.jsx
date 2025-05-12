@@ -5,7 +5,7 @@ import "../../styles/home.css";
 import Footer from "./Footer.jsx";
 import NavbarHome from "./NavbarHome.jsx";
 
-
+/* Code fait uniquement par jayden*/
 function Home() {
 
 

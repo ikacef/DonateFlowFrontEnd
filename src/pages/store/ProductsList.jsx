@@ -30,7 +30,7 @@ function ProductsList() {
         // TODO API
     }
 
-    const handleUpdate = async (id) => {
+    const handleUpdate = async () => {
         const name = prompt("Nouveau nom du produit :");
         const desc = prompt("Nouvelle description :");
         const price = prompt("Prix :");
@@ -51,7 +51,7 @@ function ProductsList() {
         }
     };
 
-    const handleDelete = async (id) => {
+    const handleDelete = async () => {
         if (!window.confirm("Supprimer ce produit ?")) return;
 
         try {

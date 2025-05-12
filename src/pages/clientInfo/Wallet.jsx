@@ -3,6 +3,7 @@ import "../../styles/wallet.css"
 import NavbarHome from "../display/NavbarHome.jsx";
 import Footer from "../display/Footer.jsx";
 
+/* Code fait uniquement par jayden*/
 const Wallet = () => {
 
 

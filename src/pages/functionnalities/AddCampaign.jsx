@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 import {useNavigate} from "react-router-dom";
-
+/* Code fait par jayden et nassim*/
 function AddCampaign() {
     const navigate  = useNavigate();
     const [title, setTitle] = useState("");

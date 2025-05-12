@@ -120,6 +120,8 @@ function Campaigns() {
                                     >
                                         Donate Now
                                     </button>
+                                    <button onClick={handleUpdate}>Modify</button>
+                                    <button onClick={handleDelete}>Delete</button>
                                 </div>
                             </div>
                         </div>
