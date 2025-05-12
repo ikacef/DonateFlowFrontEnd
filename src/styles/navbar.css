@@ -1,22 +1,53 @@
 .navbar{
     top: 0;
     right: 0;
-    position: absolute;
+    position: sticky;
     background-color: #003f67;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 20px;
     width: 100%;
-}.logoFLow{margin-right: 500px; width: 10%}
+}
 
-.navTitle{
-    color: #c8c8ff;
-    font-size: 30px;
-}.navTitle:hover{color: mediumpurple;}
 
-.navElement{
-    margin-left: 50px;
-    color: black;
-}.navElement:hover{color: lightgreen; text-decoration: underline;}
 
-.searchButton{
+.navbar-light .navbar-nav .nav-link {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #2a9d8f;
+    text-decoration: none;
+}
+
+.logoFlow {
+    height: 100px;
+    width: auto;
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: none;
+}
+
+.navbar-toggler-icon {
+    background-color: #2a9d8f; /* Greenish icon */
+}
+
+.btn-logout {
+    background-color: #2a9d8f;
     color: white;
-    background-color: #003f67;
-}.searchBar{width: 280px}
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 20px;
+    padding: 8px 20px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #21867a;
+}

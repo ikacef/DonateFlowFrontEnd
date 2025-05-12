@@ -52,6 +52,17 @@ function Campaigns() {
 
     useEffect(() => {
         loadAllCampaigns();
+
+        // Pour utiliser un form Zeffy lors des donations, script zeffy
+        const script = document.createElement("script");
+        //script.src = "https://widget.zeffy.com/widget.js"
+        script.src = "https://zeffy-scripts.s3.ca-central-1.amazonaws.com/embed-form-script.min.js"
+        script.defer = true;
+        document.body.appendChild(script);
+
+        return () => {
+            document.body.removeChild(script);
+        };
     }, []);
 
     const navigate = useNavigate();
@@ -114,7 +125,9 @@ function Campaigns() {
                                     <p>
                                         <strong>Raised:</strong> ${campaign.currentAmount || 0} of ${campaign.goalAmount}
                                     </p>
-                                    <button className="btn btn-primary w-100" >Donate Now</button>
+                                    <button className="btn btn-primary w-100"
+                                            zeffy-form-link="https://www.zeffy.com/embed/donation-form/donate-to-make-a-difference-15946?modal=true"
+                                    >Donate Now</button>
                                 </div>
                             </div>
                         </div>

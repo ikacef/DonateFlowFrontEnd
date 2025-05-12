@@ -9,6 +9,7 @@ import Login from "./pages/clientInfo/Login.jsx"
  import AddCampaign from "./pages/functionnalities/AddCampaign.jsx";
  import {AuthProvider} from "./pages/utils/AuthService.jsx";
  import RoutePrivate from "./pages/utils/RoutePrivate.jsx";
+ import ZeffyProducts from "./pages/store/ZeffyProducts.jsx";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
                         <Route path="/wallet" element={<Wallet/>} />
                         <Route path="/store" element={<ProductsList/>} />
                         <Route path="/add" element={<AddCampaign/>} />
+                        <Route path="/store2" element={<ZeffyProducts/>} />
                         <Route path="*" element={<NotFound/>} />
 
                     </Routes>

@@ -68,7 +68,7 @@ function ProductsList() {
 
     return (
         <div className="mt-5 container">
-            <><NavbarHome/>v</>
+            <NavbarHome/>
             <div className="card">
                 <div className='card-header'>
                     Liste des Produits:
