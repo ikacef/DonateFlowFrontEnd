@@ -16,7 +16,7 @@ function ProductsList() {
      */
 
     const loadAllProducts = async () => {
-        const result = await axios.get("http://10.10.2.114:8989/products/getAllProducts");
+        const result = await axios.get("http://10.10.2.114:1010/products/getAllProducts");
         console.log(result.data)
         setListProducts(result.data);
     };
@@ -38,7 +38,7 @@ function ProductsList() {
         if (!name || !desc || !price || !stock) return;
 
         try {
-            await axios.put(`http://10.10.2.114:8989/products/update`, {
+            await axios.put(`http://10.10.2.114:1010/products/update`, {
                 productName: name,
                 productDescription: desc,
                 productPrice: price,
@@ -55,7 +55,7 @@ function ProductsList() {
         if (!window.confirm("Supprimer ce produit ?")) return;
 
         try {
-            await axios.delete(`http://10.10.2.114:8989/products/delete`);
+            await axios.delete(`http://10.10.2.114:1010/products/delete`);
             alert("Produit supprimé !");
             loadAllProducts();
         } catch (err) {

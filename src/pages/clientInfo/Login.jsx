@@ -27,8 +27,8 @@ const Login = () => {
         e.preventDefault();
 
         const url = isLoginMode
-            ? "http://10.10.2.114:8989/clients/login"
-            : "http://10.10.2.114:8989/clients/signup";
+            ? "http://10.10.2.114:1010/clients/login"
+            : "http://10.10.2.114:1010/clients/signup";
 
         try {
             const payload = isLoginMode

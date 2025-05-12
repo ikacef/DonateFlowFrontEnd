@@ -20,7 +20,7 @@ function AddCampaign() {
         };
 
         try {
-            const response = await axios.post("http://10.10.2.114:8989/campaigns/createCampaign", newCampaign);
+            const response = await axios.post("http://10.10.2.114:1010/campaigns/createCampaign", newCampaign);
             console.log("Campagne créée :", response.data);
         } catch (error) {
             console.error("Erreur de création :", error.response?.data || error.message);
