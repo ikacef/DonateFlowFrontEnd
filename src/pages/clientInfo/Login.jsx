@@ -107,10 +107,3 @@ const Login = () => {
 export default Login;
 
 
-/*
-
-POST /api/clients/createClient doit créer un client.
-
-POST /api/clients/login doit valider un nom d’utilisateur et un mot de passe, et retourner un code 200 en cas de succès.
-
- */

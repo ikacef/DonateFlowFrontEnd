@@ -30,7 +30,7 @@ function ProductsList() {
         // TODO API
     }
 
-    const handleUpdate = async () => {
+    const handleUpdate = async (id) => {
         const name = prompt("Nouveau nom du produit :");
         const desc = prompt("Nouvelle description :");
         const price = prompt("Prix :");
@@ -38,7 +38,7 @@ function ProductsList() {
         if (!name || !desc || !price || !stock) return;
 
         try {
-            await axios.put(`http://10.10.2.114:9403/products/update`, {
+            await axios.put(`http://10.10.2.114:9403/products/update/${id}`, {
                 productName: name,
                 productDescription: desc,
                 productPrice: price,
@@ -47,19 +47,20 @@ function ProductsList() {
             alert("Produit mis à jour !");
             loadAllProducts();
         } catch (err) {
-            alert("Erreur de mise à jour: " + err.response?.data);
+            alert("Erreur de mise à jour: " + (err.response?.data?.message || "Erreur inconnue"));
         }
     };
 
-    const handleDelete = async () => {
+    const handleDelete = async (id) => {
         if (!window.confirm("Supprimer ce produit ?")) return;
 
         try {
-            await axios.delete(`http://10.10.2.114:9403/products/delete`);
+            await axios.delete(`http://10.10.2.114:9403/products/delete/${id}`);
             alert("Produit supprimé !");
             loadAllProducts();
         } catch (err) {
-            alert("Erreur de suppression: " + err.response?.data);
+            console.error(err);
+            alert("Erreur de suppression: " + (err.response?.data?.message || "Erreur inconnue"));
         }
     };
 
@@ -99,10 +100,13 @@ function ProductsList() {
                                     <td>
                                         <button className="btn btn-sm btn-primary me-2" onClick={handleBuy}>Buy</button>
                                         <button className="btn btn-sm btn-warning me-2"
-                                                onClick={() => handleUpdate(data.id)}>Modifier
+                                                onClick={() => handleUpdate(data.idProduct)}>Modifier
                                         </button>
-                                        <button className="btn btn-sm btn-danger"
-                                                onClick={() => handleDelete(data.id)}>Supprimer
+                                        <button
+                                            className="btn btn-sm btn-danger"
+                                            onClick={() => handleDelete(data.idProduct)}
+                                        >
+                                            Supprimer
                                         </button>
                                     </td>
 

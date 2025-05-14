@@ -8,7 +8,7 @@ function NavbarHome(){
 
 
     const navigateToHome = () => {
-        navigate('/home'); // replace by home
+        navigate('/'); // replace by home
     };
 
     const navigateToStore = () => {
@@ -24,7 +24,12 @@ function NavbarHome(){
     };
 
     const handleLogout = () => {
-        navigate('/');
+        localStorage.removeItem("client");
+        window.location.href = "/login";
+    }
+
+    const handleLogin = () => {
+
     }
 
     return (
@@ -60,6 +65,7 @@ function NavbarHome(){
 
                     <div className="d-flex align-items-center" role="search">
                         <button className="btn btn-logout" onClick={handleLogout}>Logout</button>
+                        <button className="btn btn-login" onClick={handleLogin}>Login</button>
 
                     </div>
                 </div>

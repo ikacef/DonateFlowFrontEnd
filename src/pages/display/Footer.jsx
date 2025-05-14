@@ -17,18 +17,16 @@ function Footer(){
                 <div className="footer-section">
                     <h4 className="footer-title">Quick Links</h4>
                     <ul className="footer-list">
-                        <li><a href="../utils/Service.jsx">About us</a></li>
-                        <li><a href="../utils/Service.jsx">How it works</a></li>
-                        <li><a href="../utils/Service.jsx">FAQs</a></li>
+                        <li><a href="../doc/About.jsx">About us</a></li>
+                        <li><a href="../doc/HowIW.jsx">How it works</a></li>
                     </ul>
                 </div>
 
                 <div className="footer-section">
                     <h4 className="footer-title">Ressources</h4>
                     <ul className="footer-list">
-                        <li><a href="../utils/Service.jsx">Documentaion</a></li>
-                        <li><a href="../utils/Service.jsx">Support</a></li>
-                        <li><a href="../utils/Service.jsx">Contact</a></li>
+                        <li><a href="../doc/Documentation.jsx">Documentaion</a></li>
+                        <li><a href="../doc/Support.jsx">Support</a></li>
                     </ul>
                 </div>
 

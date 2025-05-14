@@ -1,6 +1,6 @@
 import "react";
-import NavbarHome from "./NavbarHome.jsx";
-import Footer from "./Footer.jsx";
+import NavbarHome from "../display/NavbarHome.jsx";
+import Footer from "../display/Footer.jsx";
 import "../../styles/charities.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -20,33 +20,37 @@ function Campaigns() {
         }
     };
 
-    const handleUpdate = async () => {
+    const handleUpdate = async (id) => {
         const newTitle = prompt("Nouveau titre:");
         const newDesc = prompt("Nouvelle description:");
-        if (!newTitle || !newDesc) return;
+        const newCurrentAmount = prompt("Montant ammassé : ")
+        const newGoaltAmount = prompt("Montant but : ")
+        if (!newTitle || !newDesc || !newCurrentAmount || !newGoaltAmount) return;
 
         try {
-            await axios.put(`http://10.10.2.114:9403/campaigns/update`, {
+            await axios.put(`http://10.10.2.114:9403/campaigns/update/${id}`, {
                 title: newTitle,
                 description: newDesc,
+                currentAmount: newCurrentAmount,
+                goalamount: newGoaltAmount,
                 isActivee: true
             });
             alert("Campagne mise à jour !");
             loadAllCampaigns();
         } catch (error) {
-            alert("Erreur de mise à jour: " + error.response?.data);
+            alert("Erreur de mise à jour: " + error.response?.data.message || "Erreur inconnue");
         }
     };
 
-    const handleDelete = async () => {
+    const handleDelete = async (id) => {
         if (!window.confirm("Supprimer cette campagne ?")) return;
 
         try {
-            await axios.delete(`http://10.10.2.114:9403/campaigns/delete`);
+            await axios.delete(`http://10.10.2.114:9403/campaigns/delete/${id}`);
             alert("Campagne supprimée !");
             loadAllCampaigns();
         } catch (error) {
-            alert("Erreur de suppression: " + error.response?.data);
+            alert("Erreur de suppression: " + (error.response?.data?.message || "Erreur inconnue"));
         }
     };
 
@@ -109,7 +113,7 @@ function Campaigns() {
                                 </div>
                                 <div className="card-body">
                                     <h5 className="card-title">{campaign.title}</h5>
-                                    <p className="text-muted">👤 {campaign.creatorUsername}</p>
+                                    <p className="text-muted">👤 {campaign.creator}</p>
                                     <p className="card-text">{campaign.description}</p>
                                     <p>
                                         <strong>Raised:</strong> ${campaign.currentAmount || 0} of ${campaign.goalAmount}
@@ -120,8 +124,8 @@ function Campaigns() {
                                     >
                                         Donate Now
                                     </button>
-                                    <button onClick={handleUpdate}>Modify</button>
-                                    <button onClick={handleDelete}>Delete</button>
+                                    <button onClick={() => handleUpdate(campaign.idCampaign)}>Modify</button>
+                                    <button onClick={() => handleDelete(campaign.idCampaign)}>Delete</button>
                                 </div>
                             </div>
                         </div>

@@ -1,15 +1,18 @@
  import './App.css'
 import Home from "./pages/display/Home.jsx";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Campaigns from "./pages/display/Campaigns.jsx";
+import Campaigns from "./pages/store/Campaigns.jsx";
 import Wallet from "./pages/clientInfo/Wallet.jsx";
 import NotFound from "./pages/utils/NotFound.jsx";
 import ProductsList from "./pages/store/ProductsList.jsx";
 import Login from "./pages/clientInfo/Login.jsx"
- import AddCampaign from "./pages/functionnalities/AddCampaign.jsx";
- import {AuthProvider} from "./pages/utils/AuthService.jsx";
+ import AddCampaign from "./pages/store/AddCampaign.jsx";
  import RoutePrivate from "./pages/utils/RoutePrivate.jsx";
  import ZeffyProducts from "./pages/store/ZeffyProducts.jsx";
+ import About from "./pages/doc/About.jsx";
+ import HowIW from "./pages/doc/HowIW.jsx";
+ import Documentation from "./pages/doc/Documentation.jsx";
+ import Support from "./pages/doc/Support.jsx";
 
 
 function App() {
@@ -23,18 +26,41 @@ function App() {
             <div>
 
 
-                    <Routes>
+                <Routes>
+                    <Route path="/login" element={<Login />} />
 
-                        <Route path="/" element={<Login />}/>
-                        <Route path="/home" element={<Home />} />
-                        <Route path="/campaign" element={<Campaigns />} />
-                        <Route path="/wallet" element={<Wallet/>} />
-                        <Route path="/store" element={<ProductsList/>} />
-                        <Route path="/add" element={<AddCampaign/>} />
-                        <Route path="/store2" element={<ZeffyProducts/>} />
-                        <Route path="*" element={<NotFound/>} />
+                    <Route path="/" element={<Home />}/>
 
-                    </Routes>
+                    <Route path="/campaign" element={
+                        <RoutePrivate>
+                            <Campaigns />
+                        </RoutePrivate>
+                    }/>
+
+                    <Route path="/wallet" element={
+                        <RoutePrivate>
+                            <Wallet />
+                        </RoutePrivate>
+                    }/>
+
+                    <Route path="/store" element={
+                        <RoutePrivate>
+                            <ProductsList />
+                        </RoutePrivate>
+                    }/>
+
+                    <Route path="/add" element={
+                        <RoutePrivate>
+                            <AddCampaign />
+                        </RoutePrivate>
+                    }/>
+
+                    <Route path="/about" element={<About />} />
+                    <Route path="/how" element={<HowIW />} />
+                    <Route path="/doc" element={<Documentation />} />
+                    <Route path="/support" element={<Support />} />
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
 
 
 
