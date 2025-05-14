@@ -43,9 +43,15 @@ function App() {
                         </RoutePrivate>
                     }/>
 
-                    <Route path="/store" element={
+                    <Route path="/cryptofy" element={
                         <RoutePrivate>
                             <ProductsList />
+                        </RoutePrivate>
+                    }/>
+
+                    <Route path="/store" element={
+                        <RoutePrivate>
+                            <ZeffyProducts />
                         </RoutePrivate>
                     }/>
 

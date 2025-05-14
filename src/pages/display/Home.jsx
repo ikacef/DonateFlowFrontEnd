@@ -4,6 +4,7 @@ import "../../styles/home.css";
 
 import Footer from "./Footer.jsx";
 import NavbarHome from "./NavbarHome.jsx";
+import Navtest from "./Navtest.jsx";
 
 /* Code fait uniquement par jayden*/
 function Home() {
@@ -13,7 +14,7 @@ function Home() {
 
         <header className="home">
 
-            <><NavbarHome/></>
+            <><Navtest/></>
 
                 <section className="front">Welcome to our DonateFlow website</section>
 

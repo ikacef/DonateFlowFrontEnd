@@ -26,9 +26,13 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        //const url = isLoginMode
+        //    ? "http://10.10.2.114:9403/clients/login"
+        //    : "http://10.10.2.114:9403/clients/signup";
+
         const url = isLoginMode
-            ? "http://10.10.2.114:9403/clients/login"
-            : "http://10.10.2.114:9403/clients/signup";
+            ? "http://localhost:9403/clients/login"
+            : "http://localhost:9403/clients/signup";
 
         try {
             const payload = isLoginMode
@@ -40,7 +44,7 @@ const Login = () => {
             if (isLoginMode) {
                 alert("Connexion réussie !");
                 localStorage.setItem("client", JSON.stringify(response.data));
-                navigate("/home");
+                navigate("/");
             } else {
                 alert("Inscription réussie ! Connectez-vous maintenant.");
                 setIsLoginMode(true);

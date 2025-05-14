@@ -13,7 +13,8 @@ function Campaigns() {
 
     const loadAllCampaigns = async () => {
         try {
-            const result = await axios.get("http://10.10.2.114:9403/campaigns/getAllCampaigns");
+            //const result = await axios.get("http://10.10.2.114:9403/campaigns/getAllCampaigns");
+            const result = await axios.get("http://localhost:9403/campaigns/getAllCampaigns");
             setListCampaigns(result.data);
         } catch (error) {
             console.error("Erreur", error);
@@ -28,7 +29,8 @@ function Campaigns() {
         if (!newTitle || !newDesc || !newCurrentAmount || !newGoaltAmount) return;
 
         try {
-            await axios.put(`http://10.10.2.114:9403/campaigns/update/${id}`, {
+            //await axios.put(`http://10.10.2.114:9403/campaigns/update/${id}`, {
+            await axios.put(`http://localhost:9403/campaigns/update/${id}`, {
                 title: newTitle,
                 description: newDesc,
                 currentAmount: newCurrentAmount,
@@ -46,7 +48,8 @@ function Campaigns() {
         if (!window.confirm("Supprimer cette campagne ?")) return;
 
         try {
-            await axios.delete(`http://10.10.2.114:9403/campaigns/delete/${id}`);
+            //await axios.delete(`http://10.10.2.114:9403/campaigns/delete/${id}`);
+            await axios.delete(`http://localhost:9403/campaigns/delete/${id}`);
             alert("Campagne supprimée !");
             loadAllCampaigns();
         } catch (error) {
