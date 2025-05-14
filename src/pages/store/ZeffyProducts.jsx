@@ -1,7 +1,8 @@
 import {useEffect} from 'react';
 import axios from 'axios';
-import NavbarHome from "../display/NavbarHome.jsx";
+import NavbarHome from "../../testFolder/NavbarHome.jsx";
 import Footer from "../display/Footer.jsx";
+import NavBar from "../display/NavBar.jsx";
 
 /* Code fait uniquement par nassim*/
 function ZeffyProducts() {
@@ -23,7 +24,7 @@ function ZeffyProducts() {
 
     return (
         <div >
-            <><NavbarHome/>v</>
+            <><NavBar/>v</>
             <div className="container my-5">
                 <h2 className="text-center mb-4">Support Us via Zeffy</h2>
                 <div className='card-header'

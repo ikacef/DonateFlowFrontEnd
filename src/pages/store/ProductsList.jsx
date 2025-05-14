@@ -1,19 +1,15 @@
 import {useState, useEffect} from 'react';
 import axios from 'axios';
-import NavbarHome from "../display/NavbarHome.jsx";
+import NavbarHome from "../../testFolder/NavbarHome.jsx";
 import Footer from "../display/Footer.jsx";
+import {Navbar} from "react-bootstrap";
+import NavBar from "../display/NavBar.jsx";
+import {useNavigate} from "react-router-dom";
 
 
 function ProductsList() {
     const [listProducts, setListProducts] = useState([]);
 
-    /**
-     const loadAllCustomers2 = () => {
-     axios.get("http://localhost:8888/reda/getAllCustomers")
-     .then(res => setCustomers(res.data))
-     .catch(err => console.log(err));
-     }
-     */
 
     const loadAllProducts = async () => {
         //const result = await axios.get("http://10.10.2.114:9403/products/getAllProducts");
@@ -36,7 +32,9 @@ function ProductsList() {
         const desc = prompt("Nouvelle description :");
         const price = prompt("Prix :");
         const stock = prompt("Stock :");
-        if (!name || !desc || !price || !stock) return;
+        const category = prompt("Catégorie : ")
+        const image = prompt("Lien de l'image : ")
+        if (!name || !desc || !price || !stock || !category || !image) return;
 
         try {
             //await axios.put(`http://10.10.2.114:9403/products/update/${id}`, {
@@ -44,8 +42,11 @@ function ProductsList() {
                 productName: name,
                 productDescription: desc,
                 productPrice: price,
-                productStock: stock
-            });
+                productStock: stock,
+                 productCategory: category,
+                 imageUrl: image
+
+             });
             alert("Produit mis à jour !");
             loadAllProducts();
         } catch (err) {
@@ -67,13 +68,20 @@ function ProductsList() {
         }
     };
 
+    const navigate = useNavigate();
+
+    const navigateToCreation = () => {
+        navigate('/addProduct');
+    };
+
 
 
 
     return (
         <div className="mt-5 container">
-            <NavbarHome/>
+            <NavBar/>
             <div className="card">
+                <button className="btn btn-outline-info" onClick={navigateToCreation}>Ajouter votre produit</button>
                 <div className='card-header'>
                     Liste des Produits:
                 </div>
@@ -87,6 +95,7 @@ function ProductsList() {
                             <th>Stock</th>
                             <th>Category</th>
                             <th>Buy Now</th>
+                            <th>Image</th>
 
 
                         </tr>
@@ -100,6 +109,7 @@ function ProductsList() {
                                     <td>{data.productPrice}</td>
                                     <td>{data.productStock}</td>
                                     <td>{data.productCategory}</td>
+                                    <td>{data.imageUrl}</td>
                                     <td>
                                         <button className="btn btn-sm btn-primary me-2" onClick={handleBuy}>Buy</button>
                                         <button className="btn btn-sm btn-warning me-2"

@@ -6,8 +6,9 @@ function AddCampaign() {
     const navigate  = useNavigate();
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
-    const [goalAmount, setGoalAmount] = useState(0.00);
-    const [currentAmount, setCurrentAmount] = useState(0.00); // souvent 0.00 par défaut
+    const [goalAmount, setGoalAmount] = useState(null);
+    const [currentAmount, setCurrentAmount] = useState(null);
+    const [imageUrl, setImageUrl] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -17,14 +18,15 @@ function AddCampaign() {
             description,
             goalAmount,
             currentAmount,
+            imageUrl
         };
 
         try {
             //const response = await axios.post("http://10.10.2.114:9403/campaigns/createCampaign", newCampaign);
             const response = await axios.post("http://localhost:9403/campaigns/createCampaign", newCampaign);
-            console.log("Campagne créée :", response.data);
+            alert("Campagne créée :", response.data);
         } catch (error) {
-            console.error("Erreur de création :", error.response?.data || error.message);
+            alert("Veuillez vérifier vos données", error.response?.data || error.message);
         }
     };
 
@@ -49,7 +51,7 @@ function AddCampaign() {
             />
             <input
                 type="number"
-                step="0.01"
+                step="1.00"
                 value={goalAmount}
                 onChange={(e) => setGoalAmount(parseFloat(e.target.value))}
                 placeholder="Montant visé (ex: 5000.00)"
@@ -57,10 +59,17 @@ function AddCampaign() {
             />
             <input
                 type="number"
-                step="0.01"
+                step="1.00"
                 value={currentAmount}
                 onChange={(e) => setCurrentAmount(parseFloat(e.target.value))}
                 placeholder="Montant actuel (ex: 0.00)"
+                required
+            />
+            <input
+                type="text"
+                value={imageUrl}
+                onChange={(e) => setImageUrl(e.target.value)}
+                placeholder="Image de la campagne"
                 required
             />
             <button type="submit" onClick={navigateToCampaign}>Créer la campagne</button>

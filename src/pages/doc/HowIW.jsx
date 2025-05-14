@@ -1,6 +1,7 @@
 import "react";
-import NavbarHome from "../display/NavbarHome.jsx";
+import NavbarHome from "../../testFolder/NavbarHome.jsx";
 import Footer from "../display/Footer.jsx";
+import NavBar from "../display/NavBar.jsx";
 
 /* Code fait uniquement par jayden*/
 function HowIW() {
@@ -10,7 +11,7 @@ function HowIW() {
 
         <header className="howiw">
 
-            <><NavbarHome/></>
+            <><NavBar/></>
 
             <p className="text-bg-info">Fonctionnalités
                 Pour les Donateurs :

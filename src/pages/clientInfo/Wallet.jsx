@@ -1,7 +1,9 @@
 import  'react';
 import "../../styles/wallet.css"
-import NavbarHome from "../display/NavbarHome.jsx";
+import NavbarHome from "../../testFolder/NavbarHome.jsx";
 import Footer from "../display/Footer.jsx";
+import Navtest from "../display/NavBar.jsx";
+import NavBar from "../display/NavBar.jsx";
 
 /* Code fait uniquement par jayden*/
 const Wallet = () => {
@@ -10,7 +12,7 @@ const Wallet = () => {
     return (
 
         <div className="main">
-            <NavbarHome/>
+            <NavBar/>
             <div className="walletMain container mt-5">
                 <h2 className="text-center mb-4">My Wallet</h2>
 

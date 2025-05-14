@@ -13,7 +13,7 @@ const Login = () => {
         username: "",
         password: ""
     });
-    const [isLoginMode, setIsLoginMode] = useState(true); // true = Login, false = Sign Up
+    const [isLoginMode, setIsLoginMode] = useState(true);
 
 
 
@@ -64,7 +64,10 @@ const Login = () => {
     };
 
     return (
+
+
         <div style={{ maxWidth: "400px", margin: "50px auto", padding: "20px", border: "1px solid #ccc", borderRadius: "8px" }}>
+
             <h2>{isLoginMode ? "Connexion" : "Inscription"}</h2>
 
             <form onSubmit={handleSubmit}>
@@ -105,6 +108,8 @@ const Login = () => {
                 </button>
             </div>
         </div>
+
+
     );
 };
 

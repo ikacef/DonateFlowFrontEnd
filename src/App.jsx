@@ -3,16 +3,17 @@ import Home from "./pages/display/Home.jsx";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Campaigns from "./pages/store/Campaigns.jsx";
 import Wallet from "./pages/clientInfo/Wallet.jsx";
-import NotFound from "./pages/utils/NotFound.jsx";
+import NotFound from "./pages/display/NotFound.jsx";
 import ProductsList from "./pages/store/ProductsList.jsx";
 import Login from "./pages/clientInfo/Login.jsx"
- import AddCampaign from "./pages/store/AddCampaign.jsx";
+ import AddCampaign from "./pages/utils/AddCampaign.jsx";
  import RoutePrivate from "./pages/utils/RoutePrivate.jsx";
  import ZeffyProducts from "./pages/store/ZeffyProducts.jsx";
  import About from "./pages/doc/About.jsx";
  import HowIW from "./pages/doc/HowIW.jsx";
  import Documentation from "./pages/doc/Documentation.jsx";
  import Support from "./pages/doc/Support.jsx";
+ import AddProduct from "./pages/utils/AddProduct.jsx";
 
 
 function App() {
@@ -55,9 +56,15 @@ function App() {
                         </RoutePrivate>
                     }/>
 
-                    <Route path="/add" element={
+                    <Route path="/addCampaign" element={
                         <RoutePrivate>
                             <AddCampaign />
+                        </RoutePrivate>
+                    }/>
+
+                    <Route path="/addProduct" element={
+                        <RoutePrivate>
+                            <AddProduct />
                         </RoutePrivate>
                     }/>
 

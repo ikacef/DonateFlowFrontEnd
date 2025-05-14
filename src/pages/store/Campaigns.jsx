@@ -1,10 +1,11 @@
 import "react";
-import NavbarHome from "../display/NavbarHome.jsx";
+import NavbarHome from "../../testFolder/NavbarHome.jsx";
 import Footer from "../display/Footer.jsx";
 import "../../styles/charities.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import NavBar from "../display/NavBar.jsx";
 
 function Campaigns() {
     const [listCampaigns, setListCampaigns] = useState([]);
@@ -25,8 +26,9 @@ function Campaigns() {
         const newTitle = prompt("Nouveau titre:");
         const newDesc = prompt("Nouvelle description:");
         const newCurrentAmount = prompt("Montant ammassé : ")
-        const newGoaltAmount = prompt("Montant but : ")
-        if (!newTitle || !newDesc || !newCurrentAmount || !newGoaltAmount) return;
+        const newGoalAmount = prompt("Montant but : ")
+        const newImageUrl = prompt("Lien de l'image: ")
+        if (!newTitle || !newDesc || !newCurrentAmount || !newGoalAmount || !newImageUrl) return;
 
         try {
             //await axios.put(`http://10.10.2.114:9403/campaigns/update/${id}`, {
@@ -34,7 +36,8 @@ function Campaigns() {
                 title: newTitle,
                 description: newDesc,
                 currentAmount: newCurrentAmount,
-                goalamount: newGoaltAmount,
+                goalAmount: newGoalAmount,
+                imageUrl: newImageUrl,
                 isActivee: true
             });
             alert("Campagne mise à jour !");
@@ -77,7 +80,7 @@ function Campaigns() {
     const navigate = useNavigate();
 
     const navigateToCreation = () => {
-        navigate('/add');
+        navigate('/addCampaign');
     };
 
     const handleSearchChange = (e) => {
@@ -90,7 +93,7 @@ function Campaigns() {
 
     return (
         <div className="main">
-            <NavbarHome />
+            <NavBar />
 
             <div className="charitiesMain container py-4">
                 <div className="row align-items-center mb-4">
@@ -111,15 +114,12 @@ function Campaigns() {
                     {listCampaigns.slice(0, visibleCount).map((campaign, index) => (
                         <div className="col-md-4" key={index}>
                             <div className="card h-100">
-                                <div className="position-relative">
-                                    <img src="https://via.placeholder.com/400x200" className="card-img-top" />
-                                </div>
                                 <div className="card-body">
                                     <h5 className="card-title">{campaign.title}</h5>
-                                    <p className="text-muted">👤 {campaign.creator}</p>
-                                    <p className="card-text">{campaign.description}</p>
-                                    <p>
-                                        <strong>Raised:</strong> ${campaign.currentAmount || 0} of ${campaign.goalAmount}
+                                    <img src={campaign.imageUrl}></img>
+                                    <p className="card-text">
+                                        <strong>Raised:</strong> ${campaign.currentAmount || 0} of
+                                        ${campaign.goalAmount}
                                     </p>
                                     <button
                                         className="btn btn-primary w-100"

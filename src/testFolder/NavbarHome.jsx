@@ -1,7 +1,7 @@
 import "react";
-import logo from "../../img/logoFlow.png";
+import logo from "../img/logoFlow.png";
 import {useNavigate} from "react-router-dom";
-import '../../styles/navbar.css'
+import '../styles/navbar.css'
 /* Code fait uniquement par jayden*/
 function NavbarHome(){
     const navigate  = useNavigate();

@@ -3,10 +3,29 @@ import '../../styles/footer.css';
 import logo1 from "../../img/logo1.png";
 import logo2 from "../../img/logo2.png";
 import logo3 from "../../img/logo3.png";
+import {useNavigate} from "react-router-dom";
 
 /* Code fait uniquement par jayden*/
 
 function Footer(){
+
+    const navigate = useNavigate();
+
+    const navigatetoAbout = () => {
+        navigate('/about'); // replace by home
+    };
+
+    const navigateToHowIW = () => {
+        navigate('/how');
+    };
+
+    const navigateToDoc = () => {
+        navigate('/doc');
+    };
+
+    const navigateToSupport = () => {
+        navigate('/support');
+    };
 
 
     return (
@@ -17,16 +36,16 @@ function Footer(){
                 <div className="footer-section">
                     <h4 className="footer-title">Quick Links</h4>
                     <ul className="footer-list">
-                        <li><a href="../doc/About.jsx">About us</a></li>
-                        <li><a href="../doc/HowIW.jsx">How it works</a></li>
+                        <li><a className="linkeffect" onClick={navigatetoAbout} >About us</a></li>
+                        <li><a className="linkeffect" onClick={navigateToHowIW}>How it works</a></li>
                     </ul>
                 </div>
 
                 <div className="footer-section">
                     <h4 className="footer-title">Ressources</h4>
                     <ul className="footer-list">
-                        <li><a href="../doc/Documentation.jsx">Documentaion</a></li>
-                        <li><a href="../doc/Support.jsx">Support</a></li>
+                        <li><a className="linkeffect" onClick={navigateToDoc}>Documentaion</a></li>
+                        <li><a className="linkeffect" onClick={navigateToSupport}>Support</a></li>
                     </ul>
                 </div>
 

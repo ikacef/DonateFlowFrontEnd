@@ -3,7 +3,7 @@ import logo from "../../img/logoFlow.png";
 import { useNavigate } from "react-router-dom";
 import '../../styles/navtest.css';
 
-function Navtest() {
+function NavBar() {
     const navigate = useNavigate();
     const isLoggedIn = localStorage.getItem("client");
 
@@ -40,4 +40,4 @@ function Navtest() {
     );
 }
 
-export default Navtest;
+export default NavBar;
