@@ -12,7 +12,7 @@ function ProductsList() {
 
 
     const loadAllProducts = async () => {
-        const result = await axios.get("http://10.10.2.114:8585/products/getAllProducts");
+        const result = await axios.get("http://10.10.2.114:1119/products/getAllProducts");
         //const result = await axios.get("http://localhost:9403/products/getAllProducts");
         console.log(result.data)
         setListProducts(result.data);
@@ -37,7 +37,7 @@ function ProductsList() {
         if (!name || !desc || !price || !stock || !category || !image) return;
 
         try {
-            await axios.put(`http://10.10.2.114:8585/products/update/${id}`, {
+            await axios.put(`http://10.10.2.114:1119/products/update/${id}`, {
              //await axios.put(`http://localhost:9403/products/update/${id}`, {
                 productName: name,
                 productDescription: desc,
@@ -58,7 +58,7 @@ function ProductsList() {
         if (!window.confirm("Supprimer ce produit ?")) return;
 
         try {
-            await axios.delete(`http://10.10.2.114:8585/products/delete/${id}`);
+            await axios.delete(`http://10.10.2.114:1119/products/delete/${id}`);
             //await axios.delete(`http://localhost:9403/products/delete/${id}`);
             alert("Produit supprimé !");
             loadAllProducts();

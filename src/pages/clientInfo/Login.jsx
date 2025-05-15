@@ -27,8 +27,8 @@ const Login = () => {
         e.preventDefault();
 
         const url = isLoginMode
-           ? "http://10.10.2.114:8585/clients/login"
-            : "http://10.10.2.114:8585/clients/signup";
+           ? "http://10.10.2.114:1119/clients/login"
+            : "http://10.10.2.114:1119/clients/signup";
 
        // const url = isLoginMode
           //  ? "http://localhost:9403/clients/login"
