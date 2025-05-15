@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 import {useNavigate} from "react-router-dom";
+import "../../styles/addCampaign.css";
 /* Code fait par jayden et nassim*/
 function AddCampaign() {
     const navigate  = useNavigate();
@@ -36,6 +37,7 @@ function AddCampaign() {
 
     return (
         <form onSubmit={handleSubmit}>
+            <h1 className="form-title">Ajouter une compagne</h1>
             <input
                 type="text"
                 value={title}
@@ -69,7 +71,7 @@ function AddCampaign() {
                 type="text"
                 value={imageUrl}
                 onChange={(e) => setImageUrl(e.target.value)}
-                placeholder="Image de la campagne"
+                placeholder="Lien url de l'image de la campagne"
                 required
             />
             <button type="submit" onClick={navigateToCampaign}>Créer la campagne</button>

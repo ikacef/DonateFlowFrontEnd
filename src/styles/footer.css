@@ -5,6 +5,8 @@
     color: #333;
     border-top: 1px solid #ddd;
     margin-top: 60px;
+    margin-top: auto;
+    width: 100%;
 }
 
 .footer-container {
@@ -64,7 +66,7 @@
     color: #666;
 }
 
-/* Social Icons (ig,...) */
+/* Social Icons (ig,discord, telegram) */
 .footer-social {
     display: flex;
     align-items: center;
@@ -91,6 +93,7 @@
     color: #888;
     border-top: 1px solid #e0e0e0;
     padding-top: 15px;
+    width: 100%;
 }
 
 .linkeffect:hover{

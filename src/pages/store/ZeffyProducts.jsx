@@ -24,9 +24,9 @@ function ZeffyProducts() {
 
     return (
         <div >
-            <><NavBar/>v</>
+            <><NavBar/></>
             <div className="container my-5">
-                <h2 className="text-center mb-4">Support Us via Zeffy</h2>
+                <h2 className="text-center mb-4">Support Us By Bying Our Merch</h2>
                 <div className='card-header'
                      style={{
                          position: "relative",

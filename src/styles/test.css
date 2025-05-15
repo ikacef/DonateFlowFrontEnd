@@ -18,17 +18,15 @@
     z-index: 1000;
 }
 
-/* === Left Logo === */
 .navbar-left {
     display: flex;
     align-items: center;
     cursor: pointer;
 }
 .navbar-logo {
-    height: 48px;
+    height: 85px;
 }
 
-/* === Center links === */
 .navbar-center {
     display: flex;
     gap: 24px;
@@ -40,7 +38,6 @@
     cursor: pointer;
 }
 
-/* === Right button === */
 .navbar-right {
     display: flex;
     align-items: center;
@@ -55,7 +52,6 @@
     font-weight: bold;
 }
 
-/* === Toggle button === */
 .toggle-button {
     display: none;
     font-size: 24px;
@@ -66,7 +62,6 @@
     cursor: pointer;
 }
 
-/* === Responsive styles === */
 @media (max-width: 768px) {
     .navbar-center {
         display: none;

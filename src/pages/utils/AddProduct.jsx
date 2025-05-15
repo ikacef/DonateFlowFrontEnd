@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 import {useNavigate} from "react-router-dom";
+import "../../styles/addProduct.css"
 /* Code fait par jayden et nassim*/
 function AddProduct() {
     const navigate  = useNavigate();
@@ -38,6 +39,7 @@ function AddProduct() {
 
     return (
         <form onSubmit={handleSubmit}>
+            <h1 className="form-title">Ajouter un produit</h1>
             <input
                 type="text"
                 value={productName}
@@ -78,7 +80,7 @@ function AddProduct() {
                 type="text"
                 value={imageUrl}
                 onChange={(e) => setImageUrl(e.target.value)}
-                placeholder="Image du produit"
+                placeholder="Lien url de l'image du produit"
                 required
             />
             <button type="submit" onClick={navigateToProducts}>Créer le produit</button>
