@@ -1,6 +1,134 @@
-.main{
+/*.main{
     height: 750px;
 }
 .charitiesMain{
     margin-top: 95px;
+}*/
+
+/* charities.css */
+
+/* General Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    padding-top: 90px;
+}
+
+.main {
+    background-color: #f7f9fc;
+}
+
+/* Campaign Section */
+.charitiesMain {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.charitiesMain .form-control {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.charitiesMain .btn-outline-info {
+    border-radius: 8px;
+    padding: 10px 20px;
+    border: 2px solid #17a2b8;
+    background-color: white;
+    color: #17a2b8;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.charitiesMain .btn-outline-info:hover {
+    background-color: #17a2b8;
+    color: white;
+}
+
+/* Campaign Cards */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    font-size: 15px;
+    margin-bottom: 1rem;
+}
+
+/* Buttons inside card */
+.card .btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding: 10px 0;
+}
+
+.card .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.card button {
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 8px 0;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #e2e6ea;
+    color: #333;
+    transition: background-color 0.2s ease;
+}
+
+.card button:hover {
+    background-color: #d6d8db;
+}
+
+/* Load More Button */
+.text-center .btn-outline-primary {
+    padding: 10px 24px;
+    border: 2px solid #007bff;
+    color: #007bff;
+    background-color: transparent;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+.text-center .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
 }

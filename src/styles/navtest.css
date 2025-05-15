@@ -1,67 +1,75 @@
+/* Navbar container */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;               /* Full width edge-to-edge */
-    height: 100px;               /* Medium height */
-    background-color: #003f67;  /* Deep blue background */
+    height: 110px;
+    background: linear-gradient(90deg, #002c4b, #004f76);
+    /* background-color: #212529;*/
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 40px;            /* Horizontal spacing */
-    z-index: 1000;              /* Stay above other elements */
+    padding: 0 40px;
+    z-index: 1000;
 }
 
-.navbar-left {
+/* Sections */
+.navbar-left,
+.navbar-right {
+    width: 200px;
     display: flex;
     align-items: center;
+}
+
+.navbar-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.toggle-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    display: none;
     cursor: pointer;
 }
 
 .navbar-logo {
-    height: 95px;
+    height: 90px;
     width: auto;
+    cursor: pointer;
 }
 
-.navbar-center {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-}
 
 .nav-link {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 500;
-    font-size: 16px;
-    cursor: pointer;
-    transition: color 0.3s ease;
+    font-size: 1rem;
+    padding: 8px 14px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #2a9d8f;
+    background-color: rgba(255,255,255,0.15);
 }
-
-.navbar-right {
-    display: flex;
-    align-items: center;
-}
-
 
 .nav-button {
-    background-color: #2a9d8f;
-    color: white;
+    background-color: #00b894;
     border: none;
+    padding: 10px 20px;
     border-radius: 20px;
-    padding: 8px 16px;
-    font-weight: 500;
+    color: #fff;
+    font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-
 .nav-button:hover {
-    background-color: #21867a;
+    background-color: #00997b;
 }

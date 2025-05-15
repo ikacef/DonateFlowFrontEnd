@@ -5,7 +5,7 @@ import Footer from "../display/Footer.jsx";
 import {Navbar} from "react-bootstrap";
 import NavBar from "../display/NavBar.jsx";
 import {useNavigate} from "react-router-dom";
-
+import "../../styles/cryptofy.css";
 
 function ProductsList() {
     const [listProducts, setListProducts] = useState([]);

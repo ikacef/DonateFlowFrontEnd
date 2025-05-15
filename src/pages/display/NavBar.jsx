@@ -1,11 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import logo from "../../img/logoFlow.png";
 import { useNavigate } from "react-router-dom";
-import '../../styles/navtest.css';
+import '../../styles/test.css';
+import button from "bootstrap/js/src/button.js";
 
 function NavBar() {
     const navigate = useNavigate();
     const isLoggedIn = localStorage.getItem("client");
+    const  [isOpen, setIsOpen] = useState(false)
 
     const handleLogout = () => {
         localStorage.removeItem("client");
@@ -21,6 +23,10 @@ function NavBar() {
             <div className="navbar-left" onClick={() => navigate('/')}>
                 <img src={logo} alt="DonateFlow" className="navbar-logo" />
             </div>
+
+            <button className="toggle-button" onClick={() => setIsOpen(!isOpen)}>
+                ☰
+            </button>
 
             <div className="navbar-center">
                 <a onClick={() => navigate('/campaign')} className="nav-link">Campaigns</a>
