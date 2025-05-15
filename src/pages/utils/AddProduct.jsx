@@ -25,8 +25,8 @@ function AddProduct() {
         };
 
         try {
-            //const response = await axios.post("http://10.10.2.114:9403/products/createProduct", newProduct);
-            const response = await axios.post("http://localhost:9403/products/createProduct", newProduct);
+            const response = await axios.post("http://10.10.2.114:8585/products/createProduct", newProduct);
+            //const response = await axios.post("http://localhost:9403/products/createProduct", newProduct);
             alert("Produit créé :", response.data);
         } catch (error) {
             alert("Veuillez vérifier vos données", error.response?.data || error.message);

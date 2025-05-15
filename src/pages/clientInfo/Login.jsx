@@ -26,13 +26,13 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        //const url = isLoginMode
-        //    ? "http://10.10.2.114:9403/clients/login"
-        //    : "http://10.10.2.114:9403/clients/signup";
-
         const url = isLoginMode
-            ? "http://localhost:9403/clients/login"
-            : "http://localhost:9403/clients/signup";
+           ? "http://10.10.2.114:8585/clients/login"
+            : "http://10.10.2.114:8585/clients/signup";
+
+       // const url = isLoginMode
+          //  ? "http://localhost:9403/clients/login"
+         //   : "http://localhost:9403/clients/signup";
 
         try {
             const payload = isLoginMode
